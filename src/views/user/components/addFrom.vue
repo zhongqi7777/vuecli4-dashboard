@@ -87,13 +87,13 @@ export default {
     },
     submit() {
       if (this.formType == "add") {
-        addUser(this.form).then(res => {
+        addUser(this.form).then(() => {
           //console.log(res);
           this.$emit("initData", this.data.pagination);
           this.$emit("getTotal");
         });
       } else {
-        modifyUser(this.form).then(res => {
+        modifyUser(this.form).then(() => {
           this.$emit("initData", this.data.pagination);
           this.$emit("getTotal");
         });

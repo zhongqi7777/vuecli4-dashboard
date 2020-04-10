@@ -74,20 +74,16 @@
 
 
 <script>
-import {
-  getUserList,
-  delUser,
-  modifyUser,
-  getAllUserList
-} from "@/api/userlist";
+import { getUserList, delUser, getAllUserList } from "@/api/userlist";
 import addForm from "./addFrom";
-import { mapGetters, mapActions, mapState } from "vuex";
+import _ from "loadsh";
+// import { mapGetters, mapActions, mapState } from "vuex";
 export default {
-  watch: {
-    data(val) {
-      console.log("formData", val.formData);
-    }
-  },
+  // watch: {
+  //   data(val) {
+  //     console.log("formData", val.formData);
+  //   }
+  // },
   props: {
     // data: {
     //   type: Object,
@@ -121,7 +117,6 @@ export default {
     this.initData({ pageSize: this.pageSize, currentPage: this.currentPage });
 
     this.getTotal();
-
   },
   beforeCreate() {},
   created() {},
@@ -135,7 +130,6 @@ export default {
     onSubmit() {
       console.log("submit!");
     },
-    resetForm(val) {},
     handleSizeChange(val) {
       console.log(`每页 ${val} 条`);
       this.pageSize = val;
@@ -171,7 +165,7 @@ export default {
       });
     },
     delItem(val) {
-      delUser(val).then(res => {
+      delUser(val).then(() => {
         this.initData({
           pageSize: this.pageSize,
           currentPage: this.currentPage

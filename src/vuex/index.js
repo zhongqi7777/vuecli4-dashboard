@@ -14,12 +14,12 @@ const debug = process.env.NODE_ENV !== "production";
 const vuexPersisted = new createPersistedState({
   key: "myVuex",
   storage: window.localStorage,
-  reducer: state => ({
-    // PK: {
-    //   multipleSelection: state.pk.multipleSelection,
-    //   stepData: state.pk.stepData
-    // },
-  })
+  // reducer: state => ({
+  //   // PK: {
+  //   //   multipleSelection: state.pk.multipleSelection,
+  //   //   stepData: state.pk.stepData
+  //   // },
+  // })
   // filter: mutation => (
   //   'CHANGE_LOADING' === mutation.type
   // )
