@@ -29,5 +29,8 @@ module.exports = {
                 symbolId: 'icon-[name]'
             })
             .end()
+    },
+    configureWebpack: config => {
+        console.log(' configureWebpack: config => {');
     }
 }
