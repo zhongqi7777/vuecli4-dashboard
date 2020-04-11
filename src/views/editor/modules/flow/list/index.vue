@@ -138,17 +138,17 @@ export default {
     onSubmit() {
       console.log("submit!");
     },
-    resetForm(val) {},
+    resetForm() {},
     handleSizeChange(val) {
       console.log(`每页 ${val} 条`);
     },
     handleCurrentChange(val) {
       console.log(`当前页: ${val}`);
     },
-    handleCreate(index, row) {
+    handleCreate() {
       this.$router.push({ path: "/editor/jspluimbchart" });
     },
-    handleEdit({ $index, row }) {
+    handleEdit({ row }) {
       this.$router.push({
         path: "/editor/jspluimbchart",
         query: { row: encodeURIComponent(Base64.encode(JSON.stringify(row))) }

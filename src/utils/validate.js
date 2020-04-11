@@ -7,7 +7,7 @@ export function isExternal(path) {
   return /^(https?:|mailto:|tel:)/.test(path)
 }
 
-export function validUsername(str, self) {
+export function validUsername(str) {
   // self.$message({
   //   message: "未授权，请登录",
   //   type: "warning"

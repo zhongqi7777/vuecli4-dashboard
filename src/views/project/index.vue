@@ -46,7 +46,7 @@
       <el-table-column prop="name" label="项目名称" width="180"></el-table-column>
       <el-table-column prop="address" label="属性"></el-table-column>
       <el-table-column fixed="right" label="操作" width="100">
-        <template slot-scope="scope">
+        <template>
           <el-button type="text" size="small" @click="handleCreate('edit')">编辑</el-button>
           <el-button type="text" size="small">删除</el-button>
         </template>
@@ -70,7 +70,7 @@
 
 <script>
 import addForm from "./components/addFrom";
-import { mapGetters, mapActions, mapState } from "vuex";
+// import { mapGetters, mapActions, mapState } from "vuex";
 // import _ from "lodash";
 export default {
   watch: {
@@ -136,7 +136,7 @@ export default {
     onSubmit() {
       console.log("submit!");
     },
-    resetForm(val) {},
+    resetForm() {},
     handleSizeChange(val) {
       console.log(`每页 ${val} 条`);
     },

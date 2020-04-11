@@ -130,7 +130,7 @@ service.interceptors.response.use(
           ) {
             var msg = "Token过期 超时,请重新登陆";
             if (confirm(msg) === true) {
-              router.push("/login");
+              //router.push("/login");
               location.reload();
             } else {
             }

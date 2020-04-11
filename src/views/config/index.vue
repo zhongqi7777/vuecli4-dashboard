@@ -39,7 +39,7 @@ export default {
     };
   },
   methods: {
-    showCreatedTimes(val) {},
+    showCreatedTimes() {},
     setTabTemplate(val) {
       switch (val) {
         case "tab":

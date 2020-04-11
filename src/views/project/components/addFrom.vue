@@ -25,7 +25,7 @@
 
 
 <script>
-import { mapGetters, mapActions, mapState } from "vuex";
+// import { mapGetters, mapActions, mapState } from "vuex";
 // import _ from "lodash";
 export default {
   watch: {
@@ -37,7 +37,9 @@ export default {
   props: {
     data: {
       type: Object,
-      default: false
+      default: ()=>{
+        
+      }
     }
   },
   components: {},
