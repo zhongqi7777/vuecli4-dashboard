@@ -5,16 +5,6 @@ function resolve(dir) {
     return path.join(__dirname, dir)
 }
 
-//API_ROOT,用来打包
-if (process.env.NODE_ENV === 'development') {
-    process.env.VUE_APP_API_ROOT = '/mock'
-    //process.env.VUE_APP_BASE_API = ''//base_url
-} else {
-    process.env.VUE_APP_API_ROOT = '/api'
-    //process.env.VUE_APP_BASE_API = ''//base_url
-}
-
-
 module.exports = {
     lintOnSave: false,// close eslint
     devServer: {
