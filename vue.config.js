@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === 'development') {
 
 
 module.exports = {
-    lintOnSave: false,
+    lintOnSave: false,// close eslint
     devServer: {
         port: 4000, // 端口号
         before: require('./mock/mock-server.js')
