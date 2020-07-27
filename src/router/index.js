@@ -21,10 +21,15 @@ export const constantRoutes = [
     component: () => import("@/views/Login/index")
   },
   {
+    path: "/mall",
+    name: "mall",
+    component: () => import("@/views/mall/index")
+  },
+  {
     path: "",
     // component: Container,
     component: () => import("@/container/index"),
-    redirect: "login",
+    redirect: "mall",
     children: [
       {
         path: "dashboard",
