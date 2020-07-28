@@ -1,46 +1,70 @@
 <template>
   <div class="mall">
-    <el-row class="head">
-      <!-- <el-col :span="24">
-        <el-row>
-          <el-col :span="4">
-            <div class="left">
-              <img src="../../assets/image/mall/head/left/default.png" alt="" />
-              <span>店铺名称</span>
-            </div></el-col
-          >
-          <el-col :span="16" class="content"><div>交易数据大屏</div></el-col>
-          <el-col :span="4" class="right">
-            <div class="refresh"><img src="../../assets/image/mall/head/right/refresh/default.png" alt=""><span>刷新</span></div>
-            <div class="fullscreen"><img src="../../assets/image/mall/head/right/fullscreen/default.png" alt=""><span>全屏</span></div>
-          </el-col>
-        </el-row>
-      </el-col> -->
-
+    <el-row class="row-1">
       <el-col>
         <el-row>
           <el-col :xs="4" :sm="4" :md="4" :lg="4" :xl="4">
             <div class="left">
-              <img src="../../assets/image/mall/head/left/default.png" alt="" />
+              <img src="../../assets/image/mall/head/left/default.png" alt />
               <span>店铺名称</span>
-            </div></el-col
-          >
-          <el-col :xs="12" :sm="14" :md="14" :lg="14" :xl="16"class="content"><div>交易数据大屏</div></el-col>
+            </div>
+          </el-col>
+          <el-col :xs="12" :sm="14" :md="14" :lg="14" :xl="16" class="content">
+            <div>交易数据大屏</div>
+          </el-col>
           <el-col :xs="8" :sm="6" :md="6" :lg="6" :xl="4" class="right">
             <div class="refresh">
               <img
                 src="../../assets/image/mall/head/right/refresh/default.png"
-                alt=""
-              /><span>刷新</span>
+                alt
+              />
+              <span>刷新</span>
             </div>
             <div class="fullscreen">
               <img
                 src="../../assets/image/mall/head/right/fullscreen/default.png"
-                alt=""
-              /><span>全屏</span>
+                alt
+              />
+              <span>全屏</span>
             </div>
           </el-col>
         </el-row>
+      </el-col>
+    </el-row>
+
+    <el-row class="row-2">
+      <el-col :span="7">
+        <div class="grid-content bg-purple"></div>
+      </el-col>
+      <el-col :span="10">
+        <div class="grid-content middle-grid-margin"></div>
+      </el-col>
+      <el-col :span="7">
+        <div class="grid-content bg-purple"></div>
+      </el-col>
+    </el-row>
+
+    <el-row class="row-3">
+      <el-col :span="7">
+        <div class="row-3-grid-content bg-purple"></div>
+      </el-col>
+      <el-col :span="10">
+        <div class="row-3-grid-content middle-grid-margin"></div>
+      </el-col>
+      <el-col :span="7">
+        <div class="row-3-grid-content bg-purple"></div>
+      </el-col>
+    </el-row>
+
+    <el-row class="row-4">
+      <el-col :span="7">
+        <div class="row-4-grid-content bg-purple"></div>
+      </el-col>
+      <el-col :span="10">
+        <div class="row-4-grid-content middle-grid-margin"></div>
+      </el-col>
+      <el-col :span="7">
+        <div class="row-4-grid-content bg-purple"></div>
       </el-col>
     </el-row>
   </div>
@@ -59,7 +83,7 @@ export default {
   overflow: hidden;
   background: #000b23;
 
-  .head {
+  .row-1 {
     background: url("../../assets/image/mall/head/bg/default.png") no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
@@ -107,6 +131,30 @@ export default {
         }
       }
     }
+  }
+
+  .row-2,
+  .row-3,
+  .row-4 {
+    margin: 20px 35px;
+  }
+
+
+  .grid-content,.row-3-grid-content,
+  .row-4-grid-content {
+    height: 220px;
+    background: rgba(71, 225, 255, 0.02);
+    box-shadow: 0px 1px 20px 0px rgba(71, 225, 255, 0.1);
+    border: 1px solid rgba(71, 225, 255, 0.15);
+  }
+
+  .grid-content {
+    height: 430px;
+    width: 100%;
+  }
+
+  .middle-grid-margin{
+    margin: 0 15px;
   }
 }
 </style>
