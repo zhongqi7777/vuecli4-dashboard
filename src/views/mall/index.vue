@@ -38,17 +38,40 @@
       </el-col>
       <el-col :span="10">
         <div class="grid-content middle-grid-margin">
-          <el-row type="flex" justify="space-between" class="grid-content-row1">
-            <el-col :span="12"
-              ><div class="grid-content-row1-col1-div">
+          <el-row
+            type="flex"
+            justify="space-between"
+            class="grid-content-row1-margin"
+          >
+            <el-col :span="12">
+              <div class="comon-titile">
                 <span>今日交易金额</span>
-              </div></el-col
-            >
-            <el-col :span="12"
-              ><div class="grid-content-row1-col2-div">
-                <span>同比昨日 <span>增长20%</span></span>
-              </div></el-col
-            >
+              </div>
+            </el-col>
+            <el-col :span="12">
+              <div class="grid-content-row1-col2-div">
+                <span>
+                  同比昨日
+                  <span>增长20%</span>
+                </span>
+              </div>
+            </el-col>
+          </el-row>
+          <el-row class="grid-content-row1-margin">
+            <el-col :span="24">
+              <!-- <div class="item" v-for="(item, index) in [1, 1, 1, 1, 1, 1, 1]">
+                <span>{{ index }}</span>
+              </div> -->、
+               <countTo :startVal='startVal' :endVal='endVal' :duration='7000'></countTo>
+            </el-col>
+          </el-row>
+
+          <el-row class="grid-contentrow1-margin">
+            <el-col :span="12">
+              <div class="comon-titile">
+                <span>今日交易金额</span>
+              </div>
+            </el-col>
           </el-row>
         </div>
       </el-col>
@@ -84,8 +107,16 @@
 </template>
 
 <script>
+import countTo from "@/components/CountTo/index";
 export default {
   name: "mall",
+  components: { countTo },
+  data() {
+    return {
+      startVal: 0,
+      endVal: 1000000,
+    };
+  },
 };
 </script>
 
@@ -164,18 +195,20 @@ export default {
   .grid-content {
     height: 430px;
     //width: 100%;
-    .grid-content-row1-col1-div,
     .grid-content-row1-col2-div {
       height: 40px;
       display: flex;
       align-items: center;
     }
 
-    .grid-content-row1 {
+    .grid-content-row1-margin {
       margin: 8px;
     }
 
-    .grid-content-row1-col1-div {
+    .comon-titile {
+      height: 40px;
+      display: flex;
+      align-items: center;
       height: 35px;
       background: linear-gradient(
         90deg,
@@ -196,10 +229,41 @@ export default {
         font-size: 14px;
         font-weight: 400;
         color: rgba(255, 255, 255, 1);
-        span{
-          color: #FFE14B;
+        span {
+          color: #ffe14b;
         }
       }
+    }
+
+    .amount {
+      // height: 90px;
+      // display: flex;
+      // justify-content: space-around;
+      // align-items: center;
+
+      // .item {
+      //   display: inline-block;
+      //   width: 52px;
+      //   height: 85px;
+      //   background: rgba(71, 225, 255, 0.02);
+      //   box-shadow: 0px 1px 20px 0px rgba(71, 225, 255, 0.1);
+
+      //   span {
+      //     font-size: 68px;
+      //     font-weight: normal;
+      //     color: rgba(255, 255, 255, 1);
+      //     line-height: 78px;
+      //     background: linear-gradient(
+      //       180deg,
+      //       rgba(218, 255, 253, 1) 0%,
+      //       rgba(20, 225, 252, 1) 100%
+      //     );
+      //     background-clip: text;
+      //     -webkit-text-fill-color: transparent;
+      //   }
+
+      //   //animate
+      // }
     }
   }
 
