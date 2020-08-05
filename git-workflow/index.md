@@ -87,7 +87,20 @@ merge 操作遇到冲突的时候，当前merge不能继续进行下去;手动�
 
 
 
-分支代码同步
+分支代码同步 
+
+场景
+我们需要在合并前，将dev的代码同步到feature，保持两个分支都是最新的，然后将feature merge 到dev，这样就不会有冲突了
+
+//dev的代码同步到feature
+git checkout dev
+git pull --rebase origin dev //拉取dev最新的代码
+git checkout feature //切换到feature
+git rebase dev  //同步dev的代码到feature
+//然后将开发的代码merge到dev上
+git checkout dev //切换分支到dev
+git merge feature //合并feature到dev
+
 
 具体操作
 checkout A 分支的 a 文件
