@@ -26,6 +26,11 @@ export const constantRoutes = [
     component: () => import("@/views/mall/index")
   },
   {
+    path: "/china-map",
+    name: "china-map",
+    component: () => import("@/views/chinamap/index")
+  },
+  {
     path: "",
     // component: Container,
     component: () => import("@/container/index"),
