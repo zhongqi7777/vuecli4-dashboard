@@ -1,6 +1,11 @@
-<template></template>
+<template>
+    <div class="container-fluid" id="chart_container">
+      Loading...
+    </div>
+</template>
 
 <script>
+import axios from "axios";
 import echarts from "echarts";
 import { mapGetters, mapActions, mapState } from "vuex";
 const Base64 = require("js-base64").Base64;
@@ -77,7 +82,7 @@ export default {
     async prepareChartMap(mapName) {
       let geoJSON = null;
       if (!echarts.getMap(mapName)) {
-        geoJSON = (await axios.get("map/json/china.json")).data;
+        geoJSON = (await axios.get("static/data/china.json")).data;
         echarts.registerMap(mapName, geoJSON);
       } else {
         geoJSON = echarts.getMap(mapName).geoJson;
@@ -85,11 +90,11 @@ export default {
       return geoJSON;
     },
     async getData(type) {
-      const ret = await axios.get(`by_${type}.json`);
+      const ret = await axios.get(`static/data/by_${type}.json`);
       return ret.data;
     },
     async createMapChartConfig({ mapName, data, valueKey = "confirmedCount" }) {
-      let geoJSON = await prepareChartMap(mapName);
+      let geoJSON = await this.prepareChartMap(mapName);
       geoJSON.features.forEach((v) => {
         const showName = v.properties.name;
         data.forEach((d) => {
@@ -105,7 +110,7 @@ export default {
         });
       });
 
-      const visualPieces = getVisualPieces(
+      const visualPieces = this.getVisualPieces(
         mapName === "china" ? "country" : "city"
       );
 
@@ -213,4 +218,8 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.container-fluid{
+    height: 100%;
+}
+</style>

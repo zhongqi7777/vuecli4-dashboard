@@ -1,14 +1,9 @@
 <template>
-  <div class="china-map">
-    <ve-map
-      :data="chartData"
-      :settings="chartSettings"
-      v-bind="pubSetting"
-    ></ve-map>
-  </div>
+ <chinamap></chinamap>
 </template>
 
 <script>
+import chinamap from "@/components/map/china/index";
 import vcharts from "@/mixin/v-charts.js";
 import mapOrigin from "mock/map/_data/china"
 import { mapGetters, mapActions, mapState } from "vuex";
@@ -26,7 +21,9 @@ export default {
     //   default: false
     // }
   },
-  components: {},
+  components: {
+    chinamap
+  },
   data: function() {
     return {
       chartSettings: {
