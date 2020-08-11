@@ -59,7 +59,20 @@
         </div>
       </el-col>
       <el-col :span="7">
-        <div class="grid-content bg-purple"></div>
+        <div class="grid-content flex-column">
+          <el-row type="flex" justify="space-between" class="item">
+            <el-col :span="24">
+              <vpay></vpay>
+            </el-col>
+          </el-row>
+          <el-row type="flex" justify="space-between" class="item">
+            <el-col :span="12">
+              <gridtitle :title="'商城成交来源TOP3'"></gridtitle>
+            </el-col>
+            <el-col :span="12">
+            </el-col>
+          </el-row>
+        </div>
       </el-col>
     </el-row>
 
@@ -94,9 +107,10 @@ import countTo from "@/components/CountTo/index";
 import vhead from "./components/head/index";
 import chinamap from "@/components/map/china/index";
 import gridtitle from "./components/title/index";
+import vpay from "./components/pay/index";
 export default {
   name: "mall",
-  components: { countTo, vhead, chinamap, gridtitle },
+  components: { countTo, vhead, chinamap, gridtitle,vpay },
   data() {
     return {
       startVal: 0,
