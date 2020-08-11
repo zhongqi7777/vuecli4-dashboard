@@ -45,9 +45,7 @@
           </el-row>
 
           <el-row class="grid-map">
-            <el-col :span="24">
-              <chinamap></chinamap>
-            </el-col>
+             <chinamap></chinamap>
           </el-row>
         </div>
       </el-col>
@@ -166,6 +164,10 @@ export default {
 
   .middle-grid-margin {
     margin: 0 10px;
+  }
+
+  .grid-map{
+    height: 250px;
   }
 }
 </style>

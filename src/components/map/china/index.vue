@@ -1,7 +1,7 @@
 <template>
-    <div class="container-fluid" id="chart_container">
-      Loading...
-    </div>
+  <div class="container-fluid" id="chart_container">
+    Loading...
+  </div>
 </template>
 
 <script>
@@ -54,7 +54,8 @@ export default {
           { min: 3001, label: "3001单以上", color: "#003C87" },
           { min: 2000, max: 3000, label: "2000-3001单", color: "#003C87" },
           { min: 1001, max: 2000, label: "1001-2000单", color: "#0373FF" },
-          { min: 1, max: 1000, label: "1-1000单", color: "#5EC6F9" },
+          { min: 1, max: 1000, label: "1-1000单", color: "#5EC6F9" }, //#86FEFC
+          { min: 0, max: 1, label: "待破零", color: "#86FEFC" },
         ],
       };
       const visualPieces = pieces[type] || pieces.city;
@@ -219,7 +220,7 @@ export default {
 </script>
 
 <style lang="scss">
-.container-fluid{
-    height: 100%;
+.container-fluid {
+  height: 100%;
 }
 </style>
