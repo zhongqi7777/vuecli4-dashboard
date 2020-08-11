@@ -154,10 +154,14 @@ export default {
               type: "piecewise",
               pieces: visualPieces,
               // left: 'auto',
-              right: 0,
-              bottom: 200,
+              right: 10,
+              bottom: 5,
               // seriesIndex: 0,
               show: true,
+              textStyle: {
+                fontSize:12,
+                color: "#FFFFFF",
+              },
             },
           ],
           series: [
