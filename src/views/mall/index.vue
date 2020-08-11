@@ -43,6 +43,12 @@
               </div>
             </el-col>
           </el-row>
+
+          <el-row class="grid-map">
+            <el-col :span="24">
+              <chinamap></chinamap>
+            </el-col>
+          </el-row>
         </div>
       </el-col>
       <el-col :span="7">
@@ -79,9 +85,10 @@
 <script>
 import countTo from "@/components/CountTo/index";
 import vhead from "./components/head/index";
+import chinamap from "@/components/map/china/index";
 export default {
   name: "mall",
-  components: { countTo,vhead },
+  components: { countTo, vhead, chinamap },
   data() {
     return {
       startVal: 0,
@@ -97,8 +104,6 @@ export default {
   width: 100%;
   overflow: hidden;
   background: #000b23;
-
-
 
   .row-2,
   .row-3,
