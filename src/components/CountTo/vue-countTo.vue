@@ -219,8 +219,6 @@ export default {
 <style lang="scss" scoped>
 
   .item {
-    // display: inline-block;
-    // width: 52px;
     height: 85px;
     background: rgba(71, 225, 255, 0.02);
     box-shadow: 0px 1px 20px 0px rgba(71, 225, 255, 0.1);
@@ -239,36 +237,5 @@ export default {
       background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-
-    //animate
   }
-// .amount {
-//   height: 90px;
-//   display: flex;
-//   justify-content:center;
-//   align-items: center;
-//   .item {
-//     display: inline-block;
-//     width: 52px;
-//     height: 85px;
-//     background: rgba(71, 225, 255, 0.02);
-//     box-shadow: 0px 1px 20px 0px rgba(71, 225, 255, 0.1);
-
-//     span {
-//       font-size: 68px;
-//       font-weight: normal;
-//       color: rgba(255, 255, 255, 1);
-//       line-height: 78px;
-//       background: linear-gradient(
-//         180deg,
-//         rgba(218, 255, 253, 1) 0%,
-//         rgba(20, 225, 252, 1) 100%
-//       );
-//       background-clip: text;
-//       -webkit-text-fill-color: transparent;
-//     }
-
-//     //animate
-//   }
-// }
 </style>

@@ -3,22 +3,33 @@
     <vhead></vhead>
     <el-row class="row-2">
       <el-col :span="7">
-        <div class="grid-content bg-purple"></div>
+        <div class="grid-content flex-column">
+          <el-row type="flex" justify="space-between" class="item">
+            <el-col :span="12">
+              <gridtitle :title="'用户渠道分别'"></gridtitle>
+            </el-col>
+            <el-col :span="12">
+              <gridtitle :title="'渠道会员转换'"></gridtitle>
+            </el-col>
+          </el-row>
+          <el-row type="flex" justify="space-between" class="item">
+            <el-col :span="12">
+              <gridtitle :title="'性别年龄分布'"></gridtitle>
+            </el-col>
+            <el-col :span="12">
+              <gridtitle :title="'绑定手机号'"></gridtitle>
+            </el-col>
+          </el-row>
+        </div>
       </el-col>
       <el-col :span="10">
         <div class="grid-content middle-grid-margin">
-          <el-row
-            type="flex"
-            justify="space-between"
-            class="grid-content-row1-margin"
-          >
+          <el-row type="flex" justify="space-between">
             <el-col :span="12">
-              <div class="comon-titile">
-                <span>今日交易金额</span>
-              </div>
+              <gridtitle :title="'今日交易金额'"></gridtitle>
             </el-col>
             <el-col :span="12">
-              <div class="grid-content-row1-col2-div">
+              <div class="grid-title-end">
                 <span>
                   同比昨日
                   <span>增长20%</span>
@@ -26,7 +37,7 @@
               </div>
             </el-col>
           </el-row>
-          <el-row class="grid-content-row1-margin">
+          <el-row>
             <el-col :span="24">
               <countTo
                 :startVal="startVal"
@@ -36,16 +47,14 @@
             </el-col>
           </el-row>
 
-          <el-row class="grid-contentrow1-margin">
+          <el-row>
             <el-col :span="12">
-              <div class="comon-titile">
-                <span>今日交易金额</span>
-              </div>
+              <gridtitle :title="'用户交易分布'"></gridtitle>
             </el-col>
           </el-row>
 
           <el-row class="grid-map">
-             <chinamap></chinamap>
+            <chinamap></chinamap>
           </el-row>
         </div>
       </el-col>
@@ -84,9 +93,10 @@
 import countTo from "@/components/CountTo/index";
 import vhead from "./components/head/index";
 import chinamap from "@/components/map/china/index";
+import gridtitle from "./components/title/index";
 export default {
   name: "mall",
-  components: { countTo, vhead, chinamap },
+  components: { countTo, vhead, chinamap, gridtitle },
   data() {
     return {
       startVal: 0,
@@ -98,6 +108,8 @@ export default {
 
 <style lang="scss">
 .mall {
+  $grid-content-h:500px;
+  $grid-map-h:calc(500px - 150px);
   min-height: 100%;
   width: 100%;
   overflow: hidden;
@@ -119,37 +131,12 @@ export default {
   }
 
   .grid-content {
-    height: 430px;
-    //width: 100%;
-    .grid-content-row1-col2-div {
+    height: $grid-content-h;
+    .grid-title-end {
+      margin: 8px 8px 0 0;
       height: 40px;
       display: flex;
       align-items: center;
-    }
-
-    .grid-content-row1-margin {
-      margin: 8px;
-    }
-
-    .comon-titile {
-      height: 40px;
-      display: flex;
-      align-items: center;
-      height: 35px;
-      background: linear-gradient(
-        90deg,
-        rgba(71, 225, 255, 0.3) 0%,
-        rgba(71, 225, 255, 0) 100%
-      );
-      span {
-        font-size: 16px;
-        font-weight: 500;
-        color: rgba(255, 255, 255, 1);
-        margin: 0 10px;
-      }
-    }
-
-    .grid-content-row1-col2-div {
       justify-content: flex-end;
       span {
         font-size: 14px;
@@ -166,8 +153,18 @@ export default {
     margin: 0 10px;
   }
 
-  .grid-map{
-    height: 250px;
+  .grid-map {
+    height:$grid-map-h;
+  }
+
+  .flex-column{
+    display: flex;
+    flex-direction: column;
+
+    .item{
+      flex: 1;
+    }
+
   }
 }
 </style>

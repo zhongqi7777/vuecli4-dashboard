@@ -153,10 +153,8 @@ export default {
             {
               type: "piecewise",
               pieces: visualPieces,
-              // left: 'auto',
               right: 10,
-              bottom: 5,
-              // seriesIndex: 0,
+              bottom: 30,
               show: true,
               textStyle: {
                 fontSize:12,
