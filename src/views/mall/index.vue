@@ -160,6 +160,10 @@ export default {
 		display: flex;
 		flex-direction: column;
 
+		.item-four-section{
+			height:250px
+		}
+
 		.item {
 			flex: 1;
 		}
