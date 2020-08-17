@@ -41,7 +41,8 @@
 <script>
 import gridtitle from "../../components/title/index";
 import vpay from "../../components/pay/index";
-import pchart from "../../components/v-chart/persentchart/index";
+// import pchart from "../../components/v-chart/persentchart/index";
+import pchart from "../../components/v-chart/canvaspersent/index";
 import { mapGetters, mapActions, mapState } from "vuex";
 
 export default {
