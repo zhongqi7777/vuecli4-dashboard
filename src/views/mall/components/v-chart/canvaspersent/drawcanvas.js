@@ -40,7 +40,7 @@ export function drawRing(opts) {
 
   function fillBG() {
     ctx.beginPath();
-    ctx.lineWidth = arc;
+    ctx.lineWidth = arc/2;
     ctx.strokeStyle = color[0];
     ctx.arc(width / 2, width / 2, radius, 0, 2 * Math.PI);
     ctx.stroke();
@@ -71,7 +71,7 @@ export function drawRing(opts) {
   }
 
   function fillTextCtiy(x) {
-    ctx.font = "23px Arial";
+    ctx.font = "20px Arial";
     ctx.fillStyle = "#F0F0F2";
     ctx.textBaseline = "top";
     ctx.textAlign = "center";

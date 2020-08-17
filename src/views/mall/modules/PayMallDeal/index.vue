@@ -24,11 +24,8 @@
 								:style="index == 2 ? '' : 'margin-right:3px'"
 							>
 								<pchart
-									:radius="10"
 									:progress="item.progress"
 									:city="item.city"
-									:stroke-width="8"
-									:isAnimation="true"
 									:barColor="item.barColor"
 								></pchart></div
 						></el-col>

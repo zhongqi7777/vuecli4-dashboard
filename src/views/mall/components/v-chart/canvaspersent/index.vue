@@ -25,7 +25,7 @@ export default {
       animated: true,
       width: 190,
       radius: 75,
-      arc: 10,
+      arc: 20,
       perent: this.progress,
       city:this.city,
       color: ["RGBA(26, 39, 61, 1)", this.barColor],
