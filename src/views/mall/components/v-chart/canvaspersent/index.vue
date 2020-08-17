@@ -38,18 +38,16 @@ export default {
       },
     });
 
-    window.removeEventListener("resize",this.handleCanvasWidth);
+    //window.removeEventListener("resize", this.handleCanvasWidth);
     window.onresize = () => {
       return (() => {
         this.handleCanvasWidth();
       })();
     };
-    //this.handleCanvasWidth();
+    this.handleCanvasWidth();
   },
   beforeCreate() {},
-  created() {
-   
-  },
+  created() {},
   beforeMount() {},
   beforeUpdate() {},
   updated() {},
@@ -57,9 +55,17 @@ export default {
   destroyed: function() {},
   methods: {
     //...mapActions([""]),
-    handleCanvasWidth(){
-      console.log("handleLableWidth");
-    }
+    handleCanvasWidth() {
+      //防抖time（非立即执行）
+      this.$dt.start({
+        type: "debounce",
+        immediate: false,
+        time: 1000,
+        success: () => {
+          console.log("window ssize changed");
+        },
+      });
+    },
   },
 };
 </script>

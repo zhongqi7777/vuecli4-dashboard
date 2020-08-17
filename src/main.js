@@ -31,6 +31,9 @@ import VueDragDrop from "vue-drag-drop"; //https://github.com/cameronhimself/vue
 
 Vue.use(VueDragDrop);
 
+import dt from "./utils/debounce/index";
+Vue.prototype.$dt = dt;
+
 // 引入css
 import "element-ui/lib/theme-chalk/index.css";
 import Element from "element-ui";
