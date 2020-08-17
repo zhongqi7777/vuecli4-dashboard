@@ -29,7 +29,8 @@
 									:stroke-width="8"
 									:isAnimation="true"
 									:barColor="item.barColor"
-								></pchart></div
+								></pchart>
+								</div
 						></el-col>
 					</el-row>
 				</div>
@@ -41,7 +42,8 @@
 <script>
 import gridtitle from "../../components/title/index";
 import vpay from "../../components/pay/index";
-import pchart from "../../components/v-chart/persentchart/index";
+// import pchart from "../../components/v-chart/persentchart/index";
+import pchart from "../../components/v-chart/pie/index";
 import { mapGetters, mapActions, mapState } from "vuex";
 
 export default {
