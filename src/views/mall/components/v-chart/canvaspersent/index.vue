@@ -11,7 +11,7 @@ export default {
     // flowData(val) {
     // }
   },
-  props:["barColor","progress","city"],
+  props: ["barColor", "progress", "city"],
   components: {},
   data: function() {
     return {};
@@ -21,25 +21,35 @@ export default {
   },
   mounted() {
     drawRing({
-      parent:this.$refs.canvasring,
+      parent: this.$refs.canvasring,
       animated: true,
       width: 190,
       radius: 75,
       arc: 20,
       perent: this.progress,
-      city:this.city,
-      cityColor:"#F0F0F2",
+      city: this.city,
+      cityColor: "#F0F0F2",
       color: ["RGBA(26, 39, 61, 1)", this.barColor],
       textColor: "RGBA(255, 255, 255, 1)",
       textSize: "33px",
-      textCitySize:"20px",
+      textCitySize: "20px",
       after: function() {
         //console.timeEnd("用时");
       },
     });
+
+    window.removeEventListener("resize",this.handleCanvasWidth);
+    window.onresize = () => {
+      return (() => {
+        this.handleCanvasWidth();
+      })();
+    };
+    //this.handleCanvasWidth();
   },
   beforeCreate() {},
-  created() {},
+  created() {
+   
+  },
   beforeMount() {},
   beforeUpdate() {},
   updated() {},
@@ -47,6 +57,9 @@ export default {
   destroyed: function() {},
   methods: {
     //...mapActions([""]),
+    handleCanvasWidth(){
+      console.log("handleLableWidth");
+    }
   },
 };
 </script>
