@@ -26,6 +26,7 @@
 								<pchart
 									:radius="10"
 									:progress="item.progress"
+									:city="item.city"
 									:stroke-width="8"
 									:isAnimation="true"
 									:barColor="item.barColor"
@@ -62,9 +63,9 @@ export default {
 			startVal: 0,
 			endVal: 1000000,
 			chartData: [
-				{ progress: 75, barColor: "RGBA(255, 0, 139, 1)" },
-				{ progress: 70, barColor: "RGBA(255, 92, 49, 1)" },
-				{ progress: 10, barColor: "RGBA(245, 159, 0, 1)" }
+				{ progress: 75, barColor: "RGBA(255, 0, 139, 1)" ,city:"北京"},
+				{ progress: 70, barColor: "RGBA(255, 92, 49, 1)",city:"上海" },
+				{ progress: 95, barColor: "RGBA(245, 159, 0, 1)",city:"深圳" }
 			]
 		};
 	},

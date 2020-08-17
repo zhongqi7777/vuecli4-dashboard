@@ -11,7 +11,7 @@ export default {
     // flowData(val) {
     // }
   },
-  props:["barColor","progress"],
+  props:["barColor","progress","city"],
   components: {},
   data: function() {
     return {};
@@ -27,6 +27,7 @@ export default {
       radius: 75,
       arc: 10,
       perent: this.progress,
+      city:this.city,
       color: ["RGBA(26, 39, 61, 1)", this.barColor],
       textColor: "RGBA(255, 255, 255, 1)",
       textSize: "33px",
