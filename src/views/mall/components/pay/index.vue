@@ -1,5 +1,5 @@
 <template>
-  <div class="pay">
+  <!-- <div class="pay">
     <el-row class="row" v-for="(item, index) in payData" :key="index">
       <el-col
         :span="8"
@@ -11,6 +11,11 @@
         </div>
       </el-col>
     </el-row>
+  </div> -->
+
+  <div class="wrap" data-style="display: flex; flex-direction: column;">
+    <div class="item" data-style="flex-grow: 1">a1; flex-grow: 1</div>
+    <div class="item" data-style="flex-grow: 1">a2; flex-grow: 1</div>
   </div>
 </template>
 
@@ -67,18 +72,44 @@ export default {
 </script>
 
 <style lang="scss">
+.wrap {
+  background-color: #73a75c;
+  border: 1px solid #3a542f;
+  height: 50%;
+
+  .item {
+    background-color: #8fb97c;
+    border: 1px solid #c7ddbd;
+    padding: 10px;
+    height: 100%;
+  }
+}
+
+.grid-content-text {
+  background: red;
+  height: 100%;
+  width: 300%;
+
+  .grid-content-item {
+    background: yellow;
+    height: 100%;
+    width: 100%;
+  }
+}
+
 .pay {
   height: 100%;
   // display: flex;
   // flex-direction: column;
 
   display: flex;
-  display: -ms-flexbox;
-  display: -webkit-flex;
+  // display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  // display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  // display: -ms-flexbox; /* TWEENER - IE 10 */
+  // display: -webkit-flex; /* NEW - Chrome */
 
   flex-direction: column;
-  -ms-flex-direction: column;
-  -webkit-flex-direction: column;
+  // flex-direction: -ms-column;
 
   .row {
     //flex: 1;

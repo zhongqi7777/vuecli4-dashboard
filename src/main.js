@@ -1,6 +1,7 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import 'normalize.css/normalize.css'; 
+import "@/utils/flexibility"
 import 'babel-polyfill'
 // import "@babel/polyfill"
 import Vue from "vue";
