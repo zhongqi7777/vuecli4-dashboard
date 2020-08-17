@@ -26,9 +26,17 @@
           var data = {
             value: this.chartData,
             company: "年度能耗",
-            ringColor: [{
+            // ringColor: [{
+            //   offset: 0,
+            //   color: '#02d6fc' // 0% 处的颜色
+            // }, {
+            //   offset: 1,
+            //   color: '#367bec' // 100% 处的颜色
+            // }]
+
+             ringColor: [{
               offset: 0,
-              color: '#02d6fc' // 0% 处的颜色
+              color: 'red' // 0% 处的颜色
             }, {
               offset: 1,
               color: '#367bec' // 100% 处的颜色
