@@ -39,12 +39,12 @@ export default {
     });
 
     //window.removeEventListener("resize", this.handleCanvasWidth);
-    window.onresize = () => {
-      return (() => {
-        this.handleCanvasWidth();
-      })();
-    };
-    this.handleCanvasWidth();
+    // window.onresize = () => {
+    //   return (() => {
+    //     this.handleCanvasWidth();
+    //   })();
+    // };
+    // this.handleCanvasWidth();
   },
   beforeCreate() {},
   created() {},

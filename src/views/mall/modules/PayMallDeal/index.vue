@@ -27,7 +27,8 @@
                   :progress="item.progress"
                   :city="item.city"
                   :barColor="item.barColor"
-                ></pchart></div
+                ></pchart>
+				</div
             ></el-col>
           </el-row>
         </div>
