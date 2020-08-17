@@ -20,7 +20,9 @@ export function drawRing(opts) {
     arc = _opts.arc,
     perent = parseFloat(_opts.perent),
     citiy = _opts.city,
+    cityColor=_opts.cityColor,
     color = _opts.color,
+    textCitySize=_opts.textCitySize,
     textSize = _opts.textSize,
     textColor = _opts.textColor,
     c = document.createElement("canvas"),
@@ -71,8 +73,8 @@ export function drawRing(opts) {
   }
 
   function fillTextCtiy(x) {
-    ctx.font = "20px Arial";
-    ctx.fillStyle = "#F0F0F2";
+    ctx.font = textCitySize+" Arial";
+    ctx.fillStyle = cityColor;
     ctx.textBaseline = "top";
     ctx.textAlign = "center";
     ctx.fillText(x, width / 2, width / 1.7);
