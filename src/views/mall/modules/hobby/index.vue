@@ -1,5 +1,5 @@
 <template>
-  <div class="row-3-grid-content middle-grid-margin flex-column">
+  <div class="row-3-grid-content flex-column">
     <el-row type="flex" justify="space-between" class="item">
       <el-col :span="24">
         <gridtitle :title="'用户交易偏好'"></gridtitle>
