@@ -95,20 +95,18 @@ export default {
 <style lang="scss">
 .mall {
   $grid-content-h: 500px;
-  $row-3-grid-content: 300px;
+  $row-3-grid-content: 350px;
   // $row-4-grid-content:250px;
   $grid-map-h: calc(500px - 150px);
   min-height: 100%;
   width: 100%;
   overflow: hidden;
   background: #000b23;
-
   .row-2,
   .row-3,
   .row-4 {
     margin: 20px 35px;
   }
-
   .grid-content,
   .row-3-grid-content,
   .row-4-grid-content {
