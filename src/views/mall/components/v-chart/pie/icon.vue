@@ -1,7 +1,7 @@
 <template>
   <div class="icon-pie">
-    <p class="p-start">75%</p>
-    <p class="p-end">北京</p>
+    <p class="p-start">{{progress}}%</p>
+    <p class="p-end">{{city}}</p>
   </div>
 </template>
 
@@ -13,12 +13,7 @@ export default {
     // flowData(val) {
     // }
   },
-  props: {
-    // data: {
-    //   type: Object,
-    //   default: false
-    // }
-  },
+  props: ["progress","city"],
   components: {},
   data: function() {
     return {};

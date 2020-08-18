@@ -2,27 +2,19 @@
   <div class="mall">
     <vhead></vhead>
     <el-row class="row-2">
-      <el-col :span="7">
+      <el-col :span="7" class="el-col">
         <useragemobilemember></useragemobilemember>
       </el-col>
-      <el-col :span="10">
+      <el-col :span="10" class="el-col">
         <todayuserdeal></todayuserdeal>
       </el-col>
-      <el-col :span="7">
+      <el-col :span="7" class="el-col">
         <paymalldeal></paymalldeal>
       </el-col>
     </el-row>
 
     <el-row class="row-3">
       <el-col :span="7">
-        <!-- <div class="row-3-grid-content">
-          <el-row type="flex" justify="space-between" class="item">
-            <el-col :span="12">
-              <gridtitle :title="'用户交易偏好'"></gridtitle>
-            </el-col>
-            <el-col :span="12"> </el-col>
-          </el-row>
-        </div> -->
         <boddy></boddy>
       </el-col>
       <el-col :span="10">
@@ -90,7 +82,7 @@ export default {
     paymalldeal,
     mallhistory,
     order,
-    boddy
+    boddy,
   },
   data() {
     return {};
@@ -101,22 +93,33 @@ export default {
 <style lang="scss">
 .mall {
   $grid-content-h: 500px;
-  $row-3-grid-content: 350px;
-  // $row-4-grid-content:250px;
+  // $row-3-grid-content: 350px;
+  //  $grid-content-h: 55vh;
+  $row-3-grid-content: 40vh;
   $grid-map-h: calc(500px - 150px);
-  min-height: 100%;
   width: 100%;
   overflow: hidden;
   background: #000b23;
+
   .row-2,
   .row-3,
   .row-4 {
     margin: 20px 35px;
   }
+
+  .row-3,
+  .row-4 {
+    height: $row-3-grid-content;
+
+    .el-col {
+      height: 100%;
+    }
+  }
   .grid-content,
   .row-3-grid-content,
   .row-4-grid-content {
-    height: $row-3-grid-content;
+    // height: $row-3-grid-content;
+    height: 100%;
     background: rgba(71, 225, 255, 0.02);
     box-shadow: 0px 1px 20px 0px rgba(71, 225, 255, 0.1);
     border: 1px solid rgba(71, 225, 255, 0.15);

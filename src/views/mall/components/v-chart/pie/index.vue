@@ -2,7 +2,7 @@
   <div class="panel-content">
     <div style="width: 150px;height: 150px;" ref="chartContentPie"></div>
 
-    <icon></icon>
+    <icon :progress="progress" :city="city"></icon>
   </div>
 </template>
 
@@ -36,7 +36,7 @@ export default {
     showChart() {
       this.chart = echarts.init(this.$refs.chartContentPie);
       var data = {
-        value: this.chartData,
+        value: this.progress,
         company: "年度能耗",
         // ringColor: [{
         //   offset: 0,
