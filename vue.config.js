@@ -15,6 +15,7 @@ const name = defaultSettings.title || 'vuecli4-dashboard 2021' // page title
 // port = 9527 npm run dev OR npm run dev --port = 9527
 const port = process.env.port || process.env.npm_config_port || 7143 // dev port
 
+
 module.exports = {
     /**
   * You will need to set publicPath if you plan to deploy your site under a sub path,
@@ -23,8 +24,9 @@ module.exports = {
   * In most cases please use '/' !!!
   * Detail: https://cli.vuejs.org/config/#publicpath
   */
-    publicPath: '/',
-    outputDir: 'dist',
+    publicPath: './',
+    // outputDir: 'dist',
+    outputDir: 'docs',
     assetsDir: 'static',
     lintOnSave: false,
     // lintOnSave: process.env.NODE_ENV === 'development',

@@ -1,56 +1,56 @@
 <template>
-	<div class="icon-agesex">
-		<div class="row start">年龄性别</div>
-		<div class="row end">5156</div>
-	</div>
+  <div class="icon-agesex">
+    <div class="row start">年龄性别</div>
+    <div class="row end">5156</div>
+  </div>
 </template>
 
 <script>
 import { mapGetters, mapActions, mapState } from "vuex";
 
 export default {
-	watch: {
-		// flowData(val) {
-		// }
-	},
-	// props: {
-	// 	data: {
-	// 		type: Object,
-	// 		default: false
-	// 	}
-	// },
-	props:["title"],
-	components: {},
-	data: function() {
-		return {};
-	},
-	computed: {
-		//...mapState([""])
-	},
-	mounted() {},
-	beforeCreate() {},
-	created() {},
-	beforeMount() {},
-	beforeUpdate() {},
-	updated() {},
-	beforeDestroy() {},
-	destroyed: function() {},
-	methods: {
-		//...mapActions([""]),
-	}
+  watch: {
+    // flowData(val) {
+    // }
+  },
+  // props: {
+  // 	data: {
+  // 		type: Object,
+  // 		default: false
+  // 	}
+  // },
+  props: ["title"],
+  components: {},
+  data: function() {
+    return {};
+  },
+  computed: {
+    //...mapState([""])
+  },
+  mounted() {},
+  beforeCreate() {},
+  created() {},
+  beforeMount() {},
+  beforeUpdate() {},
+  updated() {},
+  beforeDestroy() {},
+  destroyed: function() {},
+  methods: {
+    //...mapActions([""]),
+  },
 };
 </script>
 
 <style lang="scss">
 .icon-agesex {
-	position: absolute;
-	margin: auto;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	height: 70px;
-	width: 100px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 70px;
+  width: 100px;
   .start,
   .end {
     display: flex;
@@ -69,7 +69,6 @@ export default {
     color: rgba(255, 255, 255, 1);
     line-height: 33px;
     margin-top: 10px;
-  
-}
+  }
 }
 </style>
