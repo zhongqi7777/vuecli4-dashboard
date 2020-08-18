@@ -1,16 +1,16 @@
 <template>
   <div class="panel-content">
-    <!-- <div style="width: 300px;height: 300px;background-color: #0E1824;" ref="chartContent">
-        </div> -->
-
     <div style="width: 150px;height: 150px;" ref="chartContent"></div>
+
+    <icon></icon>
   </div>
 </template>
 
 <script>
 import echarts from "echarts";
+import icon from "./icon";
 export default {
-    props: ["barColor", "progress", "city"],
+  props: ["barColor", "progress", "city"],
   name: "TEMPLATE",
   data() {
     return {
@@ -37,19 +37,22 @@ export default {
         ringColor: [
           {
             offset: 0,
-            color:this.barColor, // 0% 处的颜色
+            color: this.barColor, // 0% 处的颜色
           },
         ],
       };
       let option = {
-        title: {
-          text: data.value + "%\n" + data.company,
-          x: "center",
-          y: "center",
-          textStyle: {
-            color: "#fff",
-            fontSize: "18",
-          },
+        // title: {
+        //   text: data.value + "%\n" + data.company,
+        //   x: "center",
+        //   y: "center",
+        //   textStyle: {
+        //     color: "#fff",
+        //     fontSize: "18",
+        //   },
+        // },
+        tooltip: {
+          show: true,
         },
         color: ["#1A273D"],
         legend: {
@@ -106,7 +109,14 @@ export default {
       chart.setOption(option);
     },
   },
+  components: {
+    icon,
+  },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.panel-content {
+  position: relative;
+}
+</style>
