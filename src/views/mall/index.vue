@@ -15,14 +15,15 @@
 
     <el-row class="row-3">
       <el-col :span="7">
-        <div class="row-3-grid-content">
+        <!-- <div class="row-3-grid-content">
           <el-row type="flex" justify="space-between" class="item">
             <el-col :span="12">
               <gridtitle :title="'用户交易偏好'"></gridtitle>
             </el-col>
             <el-col :span="12"> </el-col>
           </el-row>
-        </div>
+        </div> -->
+        <boddy></boddy>
       </el-col>
       <el-col :span="10">
         <mallvistors></mallvistors>
@@ -70,6 +71,10 @@ import transaction from "./modules/transaction/index";
 
 import mallhistory from "./modules/MallHistory/index";
 
+//用户交易偏好
+
+import boddy from "./modules/hobby/index";
+
 //下单转换漏斗最近七天
 import order from "./modules/order/index";
 export default {
@@ -85,6 +90,7 @@ export default {
     paymalldeal,
     mallhistory,
     order,
+    boddy
   },
   data() {
     return {};
