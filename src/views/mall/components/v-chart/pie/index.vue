@@ -1,6 +1,6 @@
 <template>
   <div class="panel-content">
-    <div style="width: 150px;height: 150px;" ref="chartContent"></div>
+    <div style="width: 150px;height: 150px;" ref="chartContentPie"></div>
 
     <icon></icon>
   </div>
@@ -15,14 +15,26 @@ export default {
   data() {
     return {
       chartData: "71.23",
+      chart: "",
     };
   },
   mounted() {
     this.showChart();
+
+    // window.addEventListener("resize", (ev) => {
+    //   this.$dt.start({
+    //     type: "debounce",
+    //     immediate: true,
+    //     time: 100,
+    //     success: () => {
+    //       this.chart.resize();
+    //     },
+    //   });
+    // });
   },
   methods: {
     showChart() {
-      let chart = echarts.init(this.$refs.chartContent);
+      this.chart = echarts.init(this.$refs.chartContentPie);
       var data = {
         value: this.chartData,
         company: "年度能耗",
@@ -105,8 +117,8 @@ export default {
           },
         ],
       };
-      chart.clear();
-      chart.setOption(option);
+      this.chart.clear();
+      this.chart.setOption(option);
     },
   },
   components: {

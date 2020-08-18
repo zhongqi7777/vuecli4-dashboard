@@ -12,14 +12,22 @@ export default {
   data() {
     return {
       chartData: "71.23",
-      chart:""
+      chart: "",
     };
   },
   mounted() {
     this.showChart();
-    window.onresize = ()=> {
-      this.chart.resize();
-    };
+    window.addEventListener("resize", (ev) => {
+      this.$dt.start({
+        type: "debounce",
+          time: 100,
+        immediate: true,
+        success: () => {
+         console.log("cap chart size changed!");
+         this.chart.resize();
+        },
+      });
+    });
   },
   methods: {
     showChart() {
