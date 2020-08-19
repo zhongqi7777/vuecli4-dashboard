@@ -1,5 +1,5 @@
 <template>
-  <div class="head bg-center bg-cover" style="background-image: url(static/img/default.ec45e794.png)"></div>
+  <div class="head bg-center" style="background-image: url(static/img/default.ec45e794.png)"></div>
 </template>
 
 <script>
