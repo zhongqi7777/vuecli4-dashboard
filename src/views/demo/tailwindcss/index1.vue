@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import vhead from "./components/head/index"
+import vhead from "./components/head/index";
 export default {
   watch: {
     // flowData(val) {
@@ -18,7 +18,7 @@ export default {
     // }
   },
   components: {
-    vhead
+    vhead,
   },
   data: function() {
     return {};
@@ -41,7 +41,7 @@ export default {
 </script>
 
 <style lang="scss">
-.dashboard-body{
+.dashboard-body {
   background:#000b23;
 }
 </style>
