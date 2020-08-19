@@ -21,6 +21,12 @@ export const constantRoutes = [
     component: () => import("@/views/Login/index")
   },
   {
+    path: "/tailwindcss/index1",
+    name: "/tailwindcss/index1",
+    component: () => import("@/views/demo/tailwindcss/index1")
+  },
+
+  {
     path: "/mall",
     name: "mall",
     component: () => import("@/views/mall/index")
