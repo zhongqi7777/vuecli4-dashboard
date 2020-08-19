@@ -1,5 +1,5 @@
 <template>
-  <el-container class="container">
+  <el-container class="v-container">
     <el-header>
       <vheader></vheader>
     </el-header>
@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style lang="scss">
-.container {
+.v-container {
   height: 100%;
 
   .el-main {

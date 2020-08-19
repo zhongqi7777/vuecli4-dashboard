@@ -1,10 +1,11 @@
 <template>
-  <div class="container mx-auto px-4 h-screen">
-    tailwindcss
+  <div class="dashboard-body h-full">
+    <vhead></vhead>
   </div>
 </template>
 
 <script>
+import vhead from "./components/head/index"
 export default {
   watch: {
     // flowData(val) {
@@ -16,7 +17,9 @@ export default {
     //   default: false
     // }
   },
-  components: {},
+  components: {
+    vhead
+  },
   data: function() {
     return {};
   },
@@ -37,4 +40,8 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.dashboard-body{
+  background:#000b23;
+}
+</style>
