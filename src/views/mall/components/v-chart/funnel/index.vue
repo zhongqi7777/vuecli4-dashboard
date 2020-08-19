@@ -196,9 +196,10 @@ export default {
         ],
         series: [
           {
-            top: 0,
+			top: 10,
+			// bottom:30,
             type: "funnel",
-			height: "310",
+			height: "270",
 			
             gap: 20,
             minSize: 150,

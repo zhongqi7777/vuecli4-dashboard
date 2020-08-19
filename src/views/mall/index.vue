@@ -107,16 +107,8 @@ export default {
     margin: 20px 35px;
   }
 
-  .row-3,
-  .row-4 {
-    height: $row-3-grid-content;
-
-    .el-col {
-      height: 100%;
-    }
-  }
-
-  // .row-3 {
+  // .row-3,
+  // .row-4 {
   //   height: $row-3-grid-content;
 
   //   .el-col {
@@ -124,13 +116,21 @@ export default {
   //   }
   // }
 
-  // .row-4 {
-  //   height:350px;
+  .row-3 {
+    height: $row-3-grid-content;
 
-  //   .el-col {
-  //     height: 100%;
-  //   }
-  // }
+    .el-col {
+      height: 100%;
+    }
+  }
+
+  .row-4 {
+    height:350px;
+
+    .el-col {
+      height: 100%;
+    }
+  }
   .grid-content,
   .row-3-grid-content,
   .row-4-grid-content {
