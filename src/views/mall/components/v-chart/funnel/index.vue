@@ -54,16 +54,17 @@ export default {
       var markLineSetting = {
         normal: {
           show: true,
-          backgroundColor: "#e4f5da",
+        //   backgroundColor: "#e4f5da",
           borderRadius: 4,
-          color: "#333",
+          color: "#FFFFFFFF",
           verticalAlign: "middle",
           offset: [40, 0, 0, 0],
           fontSize: 14,
           //   padding: [3, 10, 5, 10],
           formatter: function(d) {
             if (d.value) {
-              var ins = "{img1|} " + "{words|" + d.data.itemValue + "}";
+			//   var ins = "{img1|} " + "{words|" + d.data.itemValue + "}";
+			  var ins = " 转换率 " + d.data.itemValue;
               return ins;
             }
           },
