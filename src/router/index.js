@@ -45,7 +45,8 @@ export const constantRoutes = [
     path: "",
     // component: Container,
     component: () => import("@/container/index"),
-    redirect: "mall",
+    // redirect: "mall",
+    redirect:"/tailwindcss/index1",
     children: [
       {
         path: "dashboard",
