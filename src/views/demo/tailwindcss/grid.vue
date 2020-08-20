@@ -33,6 +33,16 @@
       <div class="col-span-1 grid-content bg-gray-500 ..."></div>
     </div>
 
+    <p class="text-2xl ...">Responsive</p>
+    <div class="grid grid-cols-6 gap-4">
+      <div
+        class="grid-content bg-gray-400  col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-5 xl:col-span-2..."
+      ></div>
+      <div
+        class="grid-content bg-gray-500 col-span-3 sm:col-span-2 md:col-span-3 lg:col-span-1 xl:col-span-4..."
+      ></div>
+    </div>
+
     <p class="text-3xl ...">分栏间隔</p>
     <p class="text-lg mb-4">分栏之间存在间隔</p>
     <div class="grid grid-cols-4 gap-4 mb-2">
@@ -110,13 +120,6 @@
       <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">3</div>
     </div>
 
-    <p class="text-2xl ...">End</p>
-    <div class="flex justify-end bg-gray-200 mb-2">
-      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">1</div>
-      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
-      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">3</div>
-    </div>
-
     <p class="text-2xl ...">Space between</p>
     <div class="flex justify-between bg-gray-200 mb-2">
       <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">1</div>
@@ -131,8 +134,7 @@
       <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">3</div>
     </div>
 
-
-  <p class="text-2xl ...">Responsive</p>
+    <p class="text-2xl ...">Responsive</p>
     <div
       class="flex justify-start sm:justify-center md:justify-end lg:justify-between xl:justify-around mb-2 ..."
     >
