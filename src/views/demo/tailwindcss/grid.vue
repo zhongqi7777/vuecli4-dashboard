@@ -83,9 +83,14 @@
       <div class="col-start-11 col-span-3 grid-content bg-gray-400 ..."></div>
     </div>
 
-     <div class="grid grid-cols-12 gap-2 mb-2">
+    <div class="grid grid-cols-12 gap-2 mb-2">
       <div class="col-start-4 col-span-6 grid-content bg-gray-400 ..."></div>
     </div>
+
+    <p class="text-3xl ...">对齐方式</p>
+    <p class="text-lg mb-4">
+      通过 flex 布局来对分栏进行灵活的对齐
+    </p>
   </div>
 </template>
 
