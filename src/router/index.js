@@ -20,6 +20,11 @@ export const constantRoutes = [
     name: "login",
     component: () => import("@/views/Login/index")
   },
+  {
+    path: "/tailwindcss/layout",
+    name: "/tailwindcss/layout",
+    component: () => import("@/template/tailwindcss/layout")
+  },
 
   {
     path: "/tailwindcss/dashboard",
@@ -27,9 +32,9 @@ export const constantRoutes = [
     component: () => import("@/views/demo/tailwindcss/dashboard")
   },
   {
-    path: "/tailwindcss/gird",
-    name: "/tailwindcss/grid",
-    component: () => import("@/views/demo/tailwindcss/grid")
+    path: "/tailwindcss/baselayout",
+    name: "/tailwindcss/baselayout",
+    component: () => import("@/views/demo/tailwindcss/baselayout")
   },
 
   {
