@@ -110,8 +110,32 @@
       <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">3</div>
     </div>
 
-     <p class="text-2xl ...">End</p>
+    <p class="text-2xl ...">End</p>
     <div class="flex justify-end bg-gray-200 mb-2">
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">1</div>
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">3</div>
+    </div>
+
+    <p class="text-2xl ...">Space between</p>
+    <div class="flex justify-between bg-gray-200 mb-2">
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">1</div>
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">3</div>
+    </div>
+
+    <p class="text-2xl ...">Space around</p>
+    <div class="flex justify-around bg-gray-200 mb-2">
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">1</div>
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">3</div>
+    </div>
+
+
+  <p class="text-2xl ...">Responsive</p>
+    <div
+      class="flex justify-start sm:justify-center md:justify-end lg:justify-between xl:justify-around mb-2 ..."
+    >
       <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">1</div>
       <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
       <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">3</div>
