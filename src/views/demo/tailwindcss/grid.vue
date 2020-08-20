@@ -1,6 +1,6 @@
 <template>
   <div class="grid-flex-layout h-full container">
-    <p class="text-3xl ...">基础布局</p>
+    <p class="text-3xl ...">栅格布局</p>
     <p class="text-lg mb-4">使用单一分栏创建基础的栅格布局</p>
     <div class="grid grid-cols-1 mb-2">
       <div class="grid-content bg-gray-300 ..."></div>
@@ -97,7 +97,7 @@
       <div class="col-start-4 col-span-6 grid-content bg-gray-400 ..."></div>
     </div>
 
-    <p class="text-3xl ...">对齐方式</p>
+    <p class="text-3xl ...">Flex Justify Content</p>
     <p class="text-lg mb-4">
       通过 flex 布局来对分栏进行灵活的对齐
     </p>
