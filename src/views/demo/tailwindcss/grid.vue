@@ -57,6 +57,35 @@
       <div class="col-span-2 grid-content bg-gray-400 ..."></div>
       <div class="col-span-2 grid-content bg-gray-400 ..."></div>
     </div>
+
+    <div class="grid grid-cols-12 gap-2 mb-2">
+      <div class="col-span-2 grid-content bg-gray-400  ..."></div>
+      <div class="col-span-8 grid-content bg-gray-400 ..."></div>
+      <div class="col-span-2 grid-content bg-gray-400 ..."></div>
+    </div>
+
+    <p class="text-3xl ...">分栏偏移</p>
+    <p class="text-lg mb-4">
+      支持偏移指定的栏数
+    </p>
+
+    <div class="grid grid-cols-12 gap-2 mb-2">
+      <div class="col-start-7 col-span-6 grid-content bg-gray-400 ..."></div>
+    </div>
+
+    <div class="grid grid-cols-12 gap-2 mb-2">
+      <div class="col-span-3 grid-content bg-gray-400 ..."></div>
+      <div class="col-start-7 col-span-3 grid-content bg-gray-400 ..."></div>
+    </div>
+
+    <div class="grid grid-cols-12 gap-2 mb-2">
+      <div class="col-start-4 col-span-3 grid-content bg-gray-400 ..."></div>
+      <div class="col-start-11 col-span-3 grid-content bg-gray-400 ..."></div>
+    </div>
+
+     <div class="grid grid-cols-12 gap-2 mb-2">
+      <div class="col-start-4 col-span-6 grid-content bg-gray-400 ..."></div>
+    </div>
   </div>
 </template>
 
