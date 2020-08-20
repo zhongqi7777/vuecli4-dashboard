@@ -1,6 +1,50 @@
 <template>
   <div class="dashboard-body h-full">
     <vhead></vhead>
+
+    <!-- <div class="grid grid-cols-3 gap-4">
+      <div class="col-span-3 grid-content bg-red-600 ..."></div>
+      <div class="col-span-2 grid-content bg-white ..."></div>
+      <div class="col-span-1 grid-content bg-red-600 ..."></div>
+      <div class="col-span-1 grid-content bg-white ..."></div>
+      <div class="col-span-2 grid-content bg-red-600 ..."></div>
+    </div> -->
+
+    <!-- <div class="grid grid-cols-10 gap-4">
+      <div class="col-span-1 grid-content bg-red-600 ..."></div>
+      <div class="col-span-1 grid-content bg-white ..."></div>
+      <div class="col-span-1 grid-content bg-red-600 ..."></div>
+      <div class="col-span-1 grid-content bg-white ..."></div>
+      <div class="col-span-1 grid-content bg-red-600 ..."></div>
+    </div> -->
+
+    <!-- <div class="grid grid-cols-10 gap-4">
+      <div class="col-span-1 grid-content bg-red-600 ..."></div>
+      <div class="col-span-1 grid-content bg-white ..."></div>
+      <div class="col-span-1 grid-content bg-red-600 ..."></div>
+      <div class="col-span-1 grid-content bg-white ..."></div>
+      <div class="col-span-1 grid-content bg-red-600 ..."></div>
+      <div class="col-span-1 grid-content bg-red-600 ..."></div>
+      <div class="col-span-1 grid-content bg-white ..."></div>
+      <div class="col-span-1 grid-content bg-red-600 ..."></div>
+      <div class="col-span-1 grid-content bg-white ..."></div>
+      <div class="col-span-1 grid-content bg-red-600 ..."></div>
+    </div> -->
+
+    <div class="grid grid-cols-12 gap-2">
+      <div class="col-span-1 grid-content bg-red-600 ..."></div>
+      <div class="col-span-1 grid-content bg-white ..."></div>
+      <div class="col-span-1 grid-content bg-red-600 ..."></div>
+      <div class="col-span-1 grid-content bg-white ..."></div>
+      <div class="col-span-1 grid-content bg-red-600 ..."></div>
+      <div class="col-span-1 grid-content bg-red-600 ..."></div>
+      <div class="col-span-1 grid-content bg-white ..."></div>
+      <div class="col-span-1 grid-content bg-red-600 ..."></div>
+      <div class="col-span-1 grid-content bg-white ..."></div>
+      <div class="col-span-1 grid-content bg-red-600 ..."></div>
+      <div class="col-span-1 grid-content bg-red-600 ..."></div>
+      <div class="col-span-1 grid-content bg-white ..."></div>
+    </div>
   </div>
 </template>
 
@@ -42,6 +86,11 @@ export default {
 
 <style lang="scss">
 .dashboard-body {
-  background:#000b23;
+  background: #000b23;
+
+  .grid-content {
+    border-radius: 4px;
+    min-height: 36px;
+  }
 }
 </style>
