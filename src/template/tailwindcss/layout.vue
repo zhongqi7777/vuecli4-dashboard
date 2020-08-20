@@ -53,6 +53,24 @@
     >
       <div class="h-full w-full bg-gray-400"></div>
     </div>
+
+    <p class="text-3xl mt-6 ...">Display</p>
+    <p class="text-2xl ...">Block</p>
+    <p class="text-lg mb-4">
+      Use .block to create a block-level element.
+    </p>
+
+    <div class="bg-gray-200 p-4">
+      <span class="block text-gray-700 text-center bg-gray-400 px-4 py-2"
+        >1</span
+      >
+      <span class="block text-gray-700 text-center bg-gray-400 px-4 py-2 mt-2"
+        >2</span
+      >
+      <span class="block text-gray-700 text-center bg-gray-400 px-4 py-2 mt-2"
+        >3</span
+      >
+    </div>
   </div>
 </template>
 
