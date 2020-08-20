@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-body h-full">
-    <vhead></vhead>
+    <!-- <vhead></vhead> -->
 
     <!-- <div class="grid grid-cols-3 gap-4">
       <div class="col-span-3 grid-content bg-red-600 ..."></div>
@@ -86,7 +86,7 @@ export default {
 
 <style lang="scss">
 .dashboard-body {
-  background: #000b23;
+//   background: #000b23;
 
   .grid-content {
     border-radius: 4px;
