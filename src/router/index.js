@@ -21,6 +21,11 @@ export const constantRoutes = [
     component: () => import("@/views/Login/index")
   },
   {
+    path: "/geo",
+    name: "geo",
+    component: () => import("@/views/demo/map/hebei/index.vue")
+  },
+  {
     path: "/mall",
     name: "mall",
     component: () => import("@/views/mall/index")
