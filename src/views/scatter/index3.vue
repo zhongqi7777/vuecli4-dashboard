@@ -129,45 +129,66 @@ export default {
       };
 
       var option = {
-        backgroundColor: "#FFFFFF", //背景色
+        // //backgroundColor: "#FF010F27", //背景色
         tooltip: {
+          show: true,
           trigger: "item",
-          formatter: function(params) {
-            if (typeof params.value[2] == "undefined") {
-              var toolTiphtml = "";
-              for (var i = 0; i < toolTipData.length; i++) {
-                if (params.name == toolTipData[i].name) {
-                  toolTiphtml += toolTipData[i].name + ":<br>";
-                  for (var j = 0; j < toolTipData[i].value.length; j++) {
-                    toolTiphtml +=
-                      toolTipData[i].value[j].name +
-                      ":" +
-                      toolTipData[i].value[j].value +
-                      "<br>";
-                  }
-                }
-              }
-              console.log(toolTiphtml);
-              return toolTiphtml;
-            } else {
-              var toolTiphtml = "";
-              for (var i = 0; i < toolTipData.length; i++) {
-                if (params.name == toolTipData[i].name) {
-                  toolTiphtml += toolTipData[i].name + ":<br>";
-                  for (var j = 0; j < toolTipData[i].value.length; j++) {
-                    toolTiphtml +=
-                      toolTipData[i].value[j].name +
-                      ":" +
-                      toolTipData[i].value[j].value +
-                      "<br>";
-                  }
-                }
-              }
-              console.log(toolTiphtml);
-              return toolTiphtml;
+          formatter: ({ name, data }) => {
+            if (data) {
+              const {
+                name,
+                /*value,*/ confirmed,
+                dead,
+                cured,
+                increased,
+                insick,
+              } = data;
+              // const tip = `<b>${name}</b><br />${getTextForKey('现存确诊：')}${insick}<br />${getTextForKey('累计确诊：')}${confirmed}<br />${getTextForKey('治愈人数：')}${cured}<br />${getTextForKey('死亡人数：')}${dead}<br />${getTextForKey('新增确诊：')}${increased}`;
+              const tip = `<b>${name}</b><br />${"订单总数："}${data.value[2]}<br />`;
+              return tip;
             }
+            return `<b>${name}</b><br />${"暂无数据"}`;
           },
         },
+        // tooltip: {
+        //   show:true,
+        //   trigger: "item",
+        //   formatter: function(params) {
+        //     if (typeof params.value[2] == "undefined") {
+        //       var toolTiphtml = "";
+        //       for (var i = 0; i < toolTipData.length; i++) {
+        //         if (params.name == toolTipData[i].name) {
+        //           toolTiphtml += toolTipData[i].name + ":<br>";
+        //           for (var j = 0; j < toolTipData[i].value.length; j++) {
+        //             toolTiphtml +=
+        //               toolTipData[i].value[j].name +
+        //               ":" +
+        //               toolTipData[i].value[j].value +
+        //               "<br>";
+        //           }
+        //         }
+        //       }
+        //       console.log(toolTiphtml);
+        //       return toolTiphtml;
+        //     } else {
+        //       var toolTiphtml = "";
+        //       for (var i = 0; i < toolTipData.length; i++) {
+        //         if (params.name == toolTipData[i].name) {
+        //           toolTiphtml += toolTipData[i].name + ":<br>";
+        //           for (var j = 0; j < toolTipData[i].value.length; j++) {
+        //             toolTiphtml +=
+        //               toolTipData[i].value[j].name +
+        //               ":" +
+        //               toolTipData[i].value[j].value +
+        //               "<br>";
+        //           }
+        //         }
+        //       }
+        //       console.log(toolTiphtml);
+        //       return toolTiphtml;
+        //     }
+        //   },
+        // },
         visualMap: {
           show: true,
           min: 1,
@@ -181,11 +202,11 @@ export default {
 
           seriesIndex: [1],
           pieces: [
-            { min: 1001, label: "> 1001 ", color: "#800000" },
-            { min: 501, max: 1000, label: "501 - 1000 ", color: "#ff0000" },
-            { min: 101, max: 500, label: "101 - 500 ", color: "#cd5c5c" },
-            { min: 11, max: 100, label: "11 - 100 ", color: "#f08080" },
-            { min: 0, max: 10, label: "0 - 10 ", color: "#ffe4e1" },
+            { min: 1001, label: "> 1001 ", color: "#003C87" },
+            { min: 501, max: 1000, label: "501 - 1000 ", color: "#003C87" },
+            { min: 101, max: 500, label: "101 - 500 ", color: "#0373FF" },
+            { min: 11, max: 100, label: "11 - 100 ", color: "#5EC6F9" },
+            { min: 0, max: 10, label: "0 - 10 ", color: "#86FEFC" },
           ],
         },
         geo: {
@@ -276,11 +297,9 @@ export default {
       this.chart.clear();
       this.chart.setOption(option);
 
-      console.log('option.series',option.series);
-
       var j = 0;
       var IntervalId = window.setInterval(() => {
-        if (j == 5) j = 0;
+        if (j == 30) j = 0;
         // topCity数组就是top的这个5个城市.
         option.series[0].data = [convertData(data)[j]];
         this.chart.setOption(option);
