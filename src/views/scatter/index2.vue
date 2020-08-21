@@ -308,11 +308,13 @@ export default {
       ];
 
       /*获取地图数据*/
+      //this.chart.showLoading();
       let geoJSON = this.prepareChartMap("china");
       geoJSON.features.forEach((v) => {
         const name = v.properties.name;
         geoCoordMap[name] = v.properties.cp;
       });
+      //this.chart.hideLoading();
       // console.log("============geoCoordMap===================")
       // console.log(geoCoordMap)
       // console.log("================data======================")

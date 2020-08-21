@@ -23,7 +23,7 @@ export const constantRoutes = [
   {
     path: "/scatter",
     name: "mscatterall",
-    component: () => import("@/views/scatter/index2")
+    component: () => import("@/views/scatter/index3")
   },
   {
     path: "/mall",
