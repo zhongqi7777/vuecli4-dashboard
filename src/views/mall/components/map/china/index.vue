@@ -32,6 +32,7 @@ export default {
         },
       },
       chartMap: "",
+      geoCoordMap: {},
     };
   },
   computed: {
@@ -85,15 +86,40 @@ export default {
 
       this.chartMap = echarts.init(document.getElementById("mapchart"));
       this.chartMap.setOption(cfg);
-      return [this.chartMap];
+      return [this.chartMap, cfg];
     },
     async showMap(name) {
       const records = await this.getData("date");
-      this.setupMapCharts(
+      const option = await this.setupMapCharts(
         records,
         document.getElementById("chart_container"),
         name
       );
+
+      const cfg = option[1];
+      const chartMap = option[0];
+
+      console.log("this.geoCoordMap", this.geoCoordMap);
+
+      console.log(
+        "this.convertData(this.geoCoordMap,records[0].records.slice(0, 5))",
+        this.convertData(this.geoCoordMap, records[0].records.slice(0, 5))
+      );
+      cfg.options[0].series[1].data = [
+        this.convertData(this.geoCoordMap, records[0].records.slice(0, 5)),
+      ];
+      chartMap.setOption(cfg);
+      // var j = 0;
+      // var IntervalId = window.setInterval(() => {
+      //   if (j == 1) j = 0;
+      //   // topCity数组就是top的这个5个城市.
+      //   // cfg.baseOption.series[1].data = [
+      //   //   this.convertData(this.geoCoordMap, records[0].records.slice(0, 5))[j],
+      //   // ];
+      //   cfg.options[0].series[1].data = [this.convertData(this.geoCoordMap,records[0].records.slice(0, 5))[j]];
+      //   chartMap.setOption(cfg);
+      //   j++;
+      // }, 1000);
     },
     async prepareChartMap(mapName) {
       let geoJSON = null;
@@ -115,6 +141,8 @@ export default {
       let geoJSON = await this.prepareChartMap(mapName);
       geoJSON.features.forEach((v) => {
         const showName = v.properties.name;
+        this.geoCoordMap[showName] = v.properties.cp;
+
         data.forEach((d) => {
           d.records.forEach((r) => {
             const name = r.name;
@@ -209,6 +237,37 @@ export default {
               },
               z: 1000,
             },
+            {
+              name: "Top 5",
+              type: "scatter",
+              coordinateSystem: "geo",
+              data: [],
+              symbolSize: function(val) {
+                return val[2] / 10;
+              },
+              showEffectOn: "render",
+              // showEffectOn: "hover",
+              rippleEffect: {
+                brushType: "stroke",
+              },
+              hoverAnimation: true,
+              label: {
+                normal: {
+                  position: [10, 10],
+                  formatter: "{b}",
+                  position: "right",
+                  show: true,
+                },
+              },
+              itemStyle: {
+                normal: {
+                  color: "yellow",
+                  shadowBlur: 10,
+                  shadowColor: "yellow",
+                },
+              },
+              zlevel: 8,
+            },
           ],
         },
         options: data.map((d) => {
@@ -223,6 +282,37 @@ export default {
                   };
                 }),
               },
+              {
+                name: "Top 5",
+                type: "scatter",
+                coordinateSystem: "geo",
+                data: [],
+                symbolSize: function(val) {
+                  return val[2] / 10;
+                },
+                showEffectOn: "render",
+                // showEffectOn: "hover",
+                rippleEffect: {
+                  brushType: "stroke",
+                },
+                hoverAnimation: true,
+                label: {
+                  normal: {
+                    position: [10, 10],
+                    formatter: "{b}",
+                    position: "right",
+                    show: true,
+                  },
+                },
+                itemStyle: {
+                  normal: {
+                    color: "yellow",
+                    shadowBlur: 10,
+                    shadowColor: "yellow",
+                  },
+                },
+                zlevel: 8,
+              },
             ],
           };
         }),
@@ -235,6 +325,22 @@ export default {
       func.func("", "");
 
       //this.chartMap&&this.chartMap.resize();
+    },
+    convertData(geoCoordMap, data) {
+      var res = [];
+      for (var i = 0; i < data.length; i++) {
+        var geoCoord = geoCoordMap[data[i].showName];
+        if (geoCoord) {
+          geoCoord[0] = +geoCoord[0] + 0.2 + "";
+          geoCoord[1] = +geoCoord[1] + 0.1 + "";
+          res.push({
+            name: data[i].showName,
+            // insickCount: geoCoord.concat(data[i].insickCount),
+            value: geoCoord.concat(data[i].insickCount),
+          });
+        }
+      }
+      return res;
     },
   },
 };
