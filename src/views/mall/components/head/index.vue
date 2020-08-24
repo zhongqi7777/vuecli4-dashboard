@@ -13,7 +13,7 @@
               <img
                 src="../../../../assets/images/dashboard/head/time/default.png"
                 alt
-                style="margin:0 3px 0 20px"
+                style="margin:0 3px 0 10px"
               />
               <span> {{ currentTime }}</span>
             </div>
