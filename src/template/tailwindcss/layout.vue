@@ -71,6 +71,50 @@
         >3</span
       >
     </div>
+
+    <p class="text-2xl ...">
+      Inline Block
+    </p>
+    <p class="text-lg mb-4">
+      Use .inline-block to create an inline block-level element.
+    </p>
+
+    <div class="bg-gray-200 p-4">
+      <span
+        class="inline-block text-gray-700 text-center bg-gray-400 px-4 py-2 m-2"
+        >1</span
+      >
+      <span
+        class="inline-block text-gray-700 text-center bg-gray-400 px-4 py-2 m-2"
+        >2</span
+      >
+      <span
+        class="inline-block text-gray-700 text-center bg-gray-400 px-4 py-2 m-2"
+        >3</span
+      >
+    </div>
+
+    <p class="text-2xl ...">
+      Inline 
+    </p>
+    <p class="text-lg mb-4">
+      Use .inline to create an inline block-level element.
+    </p>
+
+    <div class="bg-gray-200 p-4">
+      <span
+        class="inline text-gray-700 text-center bg-gray-400 px-4 py-2 m-2"
+        >1</span
+      >
+      <span
+        class="inline text-gray-700 text-center bg-gray-400 px-4 py-2 m-2"
+        >2</span
+      >
+      <span
+        class="inline text-gray-700 text-center bg-gray-400 px-4 py-2 m-2"
+        >3</span
+      >
+    </div>
   </div>
 </template>
 
