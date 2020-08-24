@@ -1,34 +1,12 @@
 <template>
-  <div class="realtime-user row-4-grid-content">
-    <!-- <div id="table">
-      <ul id="tbody" ref="tbody" :class="{ anim: animate == true }">
-        <li v-for="item in items">{{ item.name }}</li>
-      </ul>
-    </div> -->
-
-    <table class="table">
-      <thead class="thead">
-        <tr class="tr">
-          <th rowspan="2">用户名</th>
-          <th rowspan="2">时间</th>
-          <th rowspan="2">操作</th>
-          <th rowspan="2">商品</th>
-        </tr>
-      </thead>
-      <tbody
-        id="tbody"
-        ref="tbody"
-       
-        class="tbody"
-      >
-        <tr v-for="(item, index) in tableData" class="tr">
-          <th  :class="{ anim: animate == true }">{{ index + 1 }}</th>
-          <th>Kolumna 2</th>
-          <th>Kolumna 3</th>
-          <th>Kolumna 4</th>
-        </tr>
-      </tbody>
-    </table>
+  <div class="realtime-user">
+    <el-table :data="tableData" >
+      <el-table-column prop="id" label="ID" width="80"> </el-table-column>
+      <el-table-column prop="date" label="日期" width="180"> </el-table-column>
+      <el-table-column prop="name" label="姓名" width="180"> </el-table-column>
+      <!-- <el-table-column prop="address" label="地址" width="150">
+      </el-table-column> -->
+    </el-table>
   </div>
 </template>
 
@@ -54,43 +32,76 @@ export default {
           date: "2016-05-02",
           name: "王小虎",
           address: "上海路 1518 弄",
+          id: 1,
         },
         {
           date: "2016-05-04",
           name: "王小虎",
           address: "上海市路 1517 弄",
+          id: 2,
         },
         {
           date: "2016-05-01",
           name: "王小虎",
           address: "上海市",
+          id: 3,
         },
-
+        {
+          date: "2016-05-03",
+          name: "王小虎",
+          address: "上海市普江路 1516 弄",
+          id: 4,
+        },
         {
           date: "2016-05-02",
           name: "王小虎",
           address: "上海路 1518 弄",
+          id: 5,
         },
         {
           date: "2016-05-04",
           name: "王小虎",
           address: "上海市路 1517 弄",
+          id: 6,
         },
         {
           date: "2016-05-01",
           name: "王小虎",
           address: "上海市",
+          id: 7,
         },
-      ],
-      animate: false,
-      items: [
-        { name: "马云" },
-        { name: "雷军" },
-        { name: "王勤" },
-        { name: "马云2" },
-        { name: "雷军2" },
-        { name: "王勤2" },
-      ],
+        {
+          date: "2016-05-03",
+          name: "王小虎",
+          address: "上海市普江路 1516 弄",
+          id: 8,
+        },
+        {
+          date: "2016-05-02",
+          name: "王小虎",
+          address: "上海路 1518 弄",
+          id: 9,
+        },
+        {
+          date: "2016-05-04",
+          name: "王小虎",
+          address: "上海市路 1517 弄",
+          id: 10,
+        },
+        {
+          date: "2016-05-01",
+          name: "王小虎",
+          address: "上海市",
+          id: 11,
+        },
+        {
+          date: "2016-05-03",
+          name: "王小虎",
+          address: "上海市普江路 1516 弄",
+          id: 12,
+        },
+	  ],
+	  animate:false
     };
   },
   computed: {
@@ -108,7 +119,6 @@ export default {
   destroyed: function() {},
   methods: {
     //...mapActions([""]),
-
     scroll() {
       this.animate = true; // 因为在消息向上滚动的时候需要添加css3过渡动画，所以这里需要设置true
       setTimeout(() => {
@@ -125,67 +135,48 @@ export default {
 <style lang="scss">
 .realtime-user {
   height: 100%;
-  margin: 0 2px;
 
-  .table {
-    border-spacing: 0;
-    // border: 1px solid rgba(6, 201, 221, 0.3);
-    color: rgba(255, 255, 255, 1);
-    width: 100%;
-    height: 100%;
-
-    .thead {
-      color: #06c9dd;
-      .tr {
-        th {
-          height: 40px;
-          text-align: center;
-          border: 1px solid rgba(6, 201, 221, 0.1);
-        }
-      }
-    }
-    .tbody {
-      .tr {
-        th {
-          background: #000b23;
-          height: 35px;
-          text-align: center;
-          border: 1px solid rgba(6, 201, 221, 0.1);
-          // line-height: 30px;
-          height: 25px;
-          // border:none;
-        }
-
-		 &:hover{
-		   background: RGBA(26, 39, 61, 1);
-	   }
-      }
-
-	  
-    }
+  .el-table,
+  .el-table th,
+  .el-table tbody,
+  .el-table tr {
+    background: #000b23;
   }
 
-  //修改表格最底部颜色和高度
-  //   table::before {
-  //     height: 0;
-  //   }
-
-  // #table {
-  //   width: 100%;
-  //   height: 100px;
-  //   overflow: hidden;
-  //   padding-left: 30px;
-  //   border: 1px solid black;
-  //   background: white;
+  // 斑马线背景
+  // .el-table--striped .el-table__body tr.el-table__row--striped td {
+  // 	background: RGBA(26, 39, 61, 1);
   // }
+
+  //修改表格鼠标悬浮hover背景色
+  .el-table--enable-row-hover .el-table__body tr:hover > td {
+    background: RGBA(26, 39, 61, 1);
+  }
+
+  .el-table thead {
+    color: #06c9dd;
+  }
+  //修改表格内容部分字体颜色
+  .el-table {
+    color: rgba(255, 255, 255, 1);
+    width: 100% !important;
+  }
+
+  .el-table td,
+  .el-table th,
+  .building-top .el-table th.is-leaf {
+    text-align: center;
+    height: 1px;
+    border: 1px solid rgba(6, 201, 221, 0.1);
+  }
+  //修改表格最底部颜色和高度
+  .el-table::before {
+    height: 0;
+  }
+
   .anim {
     transition: all 0.5s;
     margin-top: -30px;
   }
-  // #tbody tr {
-  //   list-style: none;
-  //   line-height: 30px;
-  //   height: 27px;
-  // }
 }
 </style>
