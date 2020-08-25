@@ -909,6 +909,116 @@
         {{ index + 1 }}
       </div>
     </div>
+    <p class="text-3xl mt-6 ...">Grid Columns Start/end</p>
+    <p class="text-2xl ...">
+      Spanning columns
+    </p>
+    <p class="text-lg mb-4">
+      Use the col-span-{n} utilities to make an element span n columns.
+    </p>
+    <div class="grid grid-cols-3 gap-4">
+      <div class="col-span-3  p-4 text-center bg-gray-400 ..."></div>
+      <div class="col-span-2  p-4 text-center bg-gray-400 ..."></div>
+      <div class="col-span-1  p-4 text-center bg-gray-400 ..."></div>
+      <div class="col-span-1  p-4 text-center bg-gray-400 ..."></div>
+      <div class="col-span-2  p-4 text-center bg-gray-400 ..."></div>
+    </div>
+
+    <p class="text-2xl ...">
+      Starting and ending lines
+    </p>
+    <p class="text-lg mb-4">
+      Use the col-start-{n} and col-end-{n} utilities to make an element start
+      or end at the nth grid line. These can also be combined with the
+      col-span-{n} utilities to span a specific number of columns.
+    </p>
+
+    <div class="grid grid-cols-6 gap-4">
+      <div class="col-start-2 col-span-4 p-4 text-center bg-gray-400 ..."></div>
+      <div class="col-start-1 col-end-3 p-4 text-center bg-gray-400 ..."></div>
+      <div class="col-end-7 col-span-2 p-4 text-center bg-gray-400 ..."></div>
+      <div class="col-start-1 col-end-7 p-4 text-center bg-gray-400 ..."></div>
+    </div>
+
+    <p class="text-2xl ...">
+      Grid Template Rows
+    </p>
+    <p class="text-lg mb-4">
+      Use the grid-rows-{n} utilities to create grids with n equally sized rows.
+    </p>
+
+    <div class="h-64 grid grid-rows-3 grid-flow-col gap-4">
+      <div
+        v-for="(item, index) in 9"
+        class="bg-gray-400 odd:bg-gray-700 p-4 text-center"
+        :key="index"
+      >
+        {{ index + 1 }}
+      </div>
+    </div>
+
+    <div class="h-64 grid grid-rows-2 grid-flow-col gap-4 mt-5">
+      <div
+        v-for="(item, index) in 9"
+        class="bg-gray-400 odd:bg-gray-700 p-4 text-center"
+        :key="index"
+      >
+        {{ index + 1 }}
+      </div>
+    </div>
+
+    <div class="h-64 grid grid-rows-1 grid-flow-col gap-4 mt-5">
+      <div
+        v-for="(item, index) in 9"
+        class="bg-gray-400 odd:bg-gray-700 p-4 text-center"
+        :key="index"
+      >
+        {{ index + 1 }}
+      </div>
+    </div>
+
+    <p class="text-2xl ...">
+      Spanning rows
+    </p>
+    <p class="text-lg mb-4">
+      Use the row-span-{n} utilities to make an element span n rows.
+    </p>
+
+    <div class="grid grid-rows-3 grid-flow-col gap-4 h-64">
+      <div class="row-span-3 bg-gray-400 ..."></div>
+      <div class="row-span-1 bg-gray-400 col-span-4 ..."></div>
+      <div class="row-span-2 bg-gray-400 col-span-4 ..."></div>
+    </div>
+
+    <p class="text-lg mb-4">
+      Use the row-start-{n} and row-end-{n} utilities to make an element start
+      or end at the nth grid line. These can also be combined with the
+      row-span-{n} utilities to span a specific number of rows.
+    </p>
+
+    <div class="grid grid-rows-3 grid-flow-col gap-4 h-64">
+      <div class="row-start-2 row-span-2 bg-gray-400  ..."></div>
+      <div class="row-end-3 row-span-2 bg-gray-400 .."></div>
+      <div class="row-start-1 row-end-4 bg-gray-400 ..."></div>
+    </div>
+
+    <p class="text-2xl ...">
+      Grid Auto Flow
+    </p>
+    <p class="text-lg mb-4">
+      Use the grid-flow-{keyword} utilities to control how the auto-placement
+      algorithm works for a grid layout.
+    </p>
+
+    <div class="grid grid-flow-col grid-cols-3 grid-rows-3 gap-4">
+      <div
+        v-for="(item, index) in 9"
+        class="bg-gray-400 odd:bg-gray-700 p-4 text-center"
+        :key="index"
+      >
+        {{ index + 1 }}
+      </div>
+    </div>
   </div>
 </template>
 
