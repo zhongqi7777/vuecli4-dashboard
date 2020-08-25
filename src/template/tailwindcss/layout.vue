@@ -309,6 +309,301 @@
         3
       </div>
     </div>
+
+    <p class="text-3xl mt-6 ...">Aligin content</p>
+    <p class="text-2xl ...">start</p>
+    <p class="text-lg mb-4">
+      Use .content-start to pack lines in a flex container against the start of
+      the cross axis:
+    </p>
+
+    <div class="flex content-start flex-wrap bg-gray-200 h-48">
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">1</div>
+      </div>
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">2</div>
+      </div>
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">3</div>
+      </div>
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">4</div>
+      </div>
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">5</div>
+      </div>
+    </div>
+
+    <p class="text-2xl ...">center</p>
+    <p class="text-lg mb-4">
+      Use .content-center to pack lines in a flex container against the start of
+      the cross axis:
+    </p>
+
+    <div class="flex content-center flex-wrap bg-gray-200 h-48">
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">1</div>
+      </div>
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">2</div>
+      </div>
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">3</div>
+      </div>
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">4</div>
+      </div>
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">5</div>
+      </div>
+    </div>
+
+    <p class="text-2xl ...">end</p>
+    <p class="text-lg mb-4">
+      Use .content-end to pack lines in a flex container against the start of
+      the cross axis:
+    </p>
+
+    <div class="flex content-end flex-wrap bg-gray-200 h-48">
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">1</div>
+      </div>
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">2</div>
+      </div>
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">3</div>
+      </div>
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">4</div>
+      </div>
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">5</div>
+      </div>
+    </div>
+
+    <p class="text-2xl ...">space between</p>
+    <p class="text-lg mb-4">
+      Use .content-end to pack lines in a flex container against the start of
+      the cross axis:
+    </p>
+
+    <div class="flex content-between flex-wrap bg-gray-200 h-48">
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">1</div>
+      </div>
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">2</div>
+      </div>
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">3</div>
+      </div>
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">4</div>
+      </div>
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">5</div>
+      </div>
+    </div>
+
+    <p class="text-2xl ...">space around</p>
+    <p class="text-lg mb-4">
+      Use .content-end to pack lines in a flex container against the start of
+      the cross axis:
+    </p>
+
+    <div class="flex content-around flex-wrap bg-gray-200 h-48">
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">1</div>
+      </div>
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">2</div>
+      </div>
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">3</div>
+      </div>
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">4</div>
+      </div>
+      <div class="w-1/3 p-2">
+        <div class="text-gray-700 text-center bg-gray-400 p-2">5</div>
+      </div>
+    </div>
+
+    <p class="text-3xl mt-6 ...">Aligin self</p>
+    <p class="text-2xl ...">auto</p>
+    <p class="text-lg mb-4">
+      Use .self-auto to align an item based on the value of the flex container's
+      align-items property:
+    </p>
+
+    <div class="flex items-stretch bg-gray-200 h-24">
+      <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+        1
+      </div>
+      <div
+        class="self-auto flex-1 text-gray-800 text-center bg-gray-500 px-4 py-2 m-2"
+      >
+        2
+      </div>
+      <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+        3
+      </div>
+    </div>
+
+    <p class="text-2xl ...">start</p>
+    <p class="text-lg mb-4">
+      Use .self-start to align an item based on the value of the flex
+      container's align-items property:
+    </p>
+
+    <div class="flex items-stretch bg-gray-200 h-24">
+      <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+        1
+      </div>
+      <div
+        class="self-start flex-1 text-gray-800 text-center bg-gray-500 px-4 py-2 m-2"
+      >
+        2
+      </div>
+      <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+        3
+      </div>
+    </div>
+
+    <p class="text-2xl ...">center</p>
+    <p class="text-lg mb-4">
+      Use .self-center to align an item based on the value of the flex
+      container's align-items property:
+    </p>
+
+    <div class="flex items-stretch bg-gray-200 h-24">
+      <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+        1
+      </div>
+      <div
+        class="self-center flex-1 text-gray-800 text-center bg-gray-500 px-4 py-2 m-2"
+      >
+        2
+      </div>
+      <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+        3
+      </div>
+    </div>
+
+    <p class="text-2xl ...">end</p>
+    <p class="text-lg mb-4">
+      Use .self-end to align an item based on the value of the flex container's
+      align-items property:
+    </p>
+
+    <div class="flex items-stretch bg-gray-200 h-24">
+      <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+        1
+      </div>
+      <div
+        class="self-end flex-1 text-gray-800 text-center bg-gray-500 px-4 py-2 m-2"
+      >
+        2
+      </div>
+      <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+        3
+      </div>
+    </div>
+
+    <p class="text-2xl ...">stretch</p>
+    <p class="text-lg mb-4">
+      Use .self-stretch to align an item based on the value of the flex
+      container's align-items property:
+    </p>
+
+    <div class="flex items-start bg-gray-200 h-24">
+      <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+        1
+      </div>
+      <div
+        class="self-stretch flex-1 text-gray-800 text-center bg-gray-500 px-4 py-2 m-2"
+      >
+        2
+      </div>
+      <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+        3
+      </div>
+    </div>
+
+    <p class="text-3xl mt-6 ...">Justify content</p>
+    <p class="text-2xl ...">start</p>
+    <p class="text-lg mb-4">
+      Use .justify-start to justify items against the start of the flex
+      container's main axis:
+    </p>
+
+    <div class="flex justify-start bg-gray-200">
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">1</div>
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">3</div>
+    </div>
+
+    <p class="text-2xl ...">center</p>
+    <p class="text-lg mb-4">
+      Use .justify-center to justify items against the start of the flex
+      container's main axis:
+    </p>
+
+    <div class="flex justify-center bg-gray-200">
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">1</div>
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">3</div>
+    </div>
+
+    <p class="text-2xl ...">end</p>
+    <p class="text-lg mb-4">
+      Use .justify-end to justify items against the start of the flex
+      container's main axis:
+    </p>
+
+    <div class="flex justify-end bg-gray-200">
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">1</div>
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">3</div>
+    </div>
+
+    <p class="text-2xl ...">space between</p>
+    <p class="text-lg mb-4">
+      Use .justify-between to justify items against the start of the flex
+      container's main axis:
+    </p>
+
+    <div class="flex justify-between bg-gray-200">
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">1</div>
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">3</div>
+    </div>
+
+    <p class="text-2xl ...">space around</p>
+    <p class="text-lg mb-4">
+      Use .justify-around to justify items against the start of the flex
+      container's main axis:
+    </p>
+
+    <div class="flex justify-around bg-gray-200">
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">1</div>
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">3</div>
+    </div>
+
+    <p class="text-2xl ...">space evenly</p>
+    <p class="text-lg mb-4">
+      Use .justify-evenly to justify items against the start of the flex
+      container's main axis:
+    </p>
+
+    <div class="flex justify-evenly bg-gray-200">
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">1</div>
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
+      <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">3</div>
+    </div>
   </div>
 </template>
 
