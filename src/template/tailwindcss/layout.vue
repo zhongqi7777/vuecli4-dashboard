@@ -604,6 +604,311 @@
       <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">2</div>
       <div class="text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">3</div>
     </div>
+
+    <p class="text-3xl mt-6 ...">Flex</p>
+    <p class="text-2xl ...">initial</p>
+    <p class="text-lg mb-4">
+      Use .flex-initial to allow a flex item to shrink but not grow, taking into
+      account its initial size:
+    </p>
+
+    <div class="flex bg-gray-200">
+      <div
+        class="flex-initial text-gray-700 text-center bg-gray-400 px-4 py-2 m-2"
+      >
+        Short
+      </div>
+      <div
+        class="flex-initial text-gray-700 text-center bg-gray-400 px-4 py-2 m-2"
+      >
+        Medium length Medium length Medium length Medium length Medium length
+        Medium length Medium length Medium length
+      </div>
+    </div>
+
+    <div class="flex bg-gray-200">
+      <div
+        class="flex-initial text-gray-700 text-center bg-gray-400 px-4 py-2 m-2"
+      >
+        Short
+      </div>
+      <div
+        class="flex-initial text-gray-700 text-center bg-gray-400 px-4 py-2 m-2"
+      >
+        Medium length Medium length Medium length Medium length Medium length
+        Medium length Medium length Medium length
+      </div>
+      <div
+        class="flex-initial text-gray-700 text-center bg-gray-400 px-4 py-2 m-2"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui ad labore
+        ipsam, aut rem quo repellat esse tempore id, quidem Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Qui ad labore ipsam, aut rem quo
+        repellat esse tempore id, quidem Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Qui ad labore ipsam, aut rem quo repellat esse tempore
+        id, quidem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
+        ad labore ipsam, aut rem quo repellat esse tempore id, quidem Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit. Qui ad labore ipsam,
+        aut rem quo repellat esse tempore id, quidem
+      </div>
+    </div>
+
+    <p class="text-2xl ...">flex 1</p>
+    <p class="text-lg mb-4">
+      Use .flex-1 to allow a flex item to grow and shrink as needed, ignoring
+      its initial size:
+    </p>
+
+    <div class="flex bg-gray-200">
+      <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+        Short
+      </div>
+      <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+        Medium length
+      </div>
+      <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+        Significantly larger amount of content Significantly larger amount of
+        content Significantly larger amount of content Significantly larger
+        amount of content Significantly larger amount of content Significantly
+        larger amount of content
+      </div>
+    </div>
+
+    <p class="text-2xl ...">atuo</p>
+    <p class="text-lg mb-4">
+      Use .atuo to allow a flex item to grow and shrink as needed, ignoring its
+      initial size:
+    </p>
+
+    <div class="flex bg-gray-200">
+      <div
+        class="flex-auto text-gray-700 text-center bg-gray-400 px-4 py-2 m-2"
+      >
+        Short
+      </div>
+      <div
+        class="flex-auto text-gray-700 text-center bg-gray-400 px-4 py-2 m-2"
+      >
+        Medium length
+      </div>
+      <div
+        class="flex-auto text-gray-700 text-center bg-gray-400 px-4 py-2 m-2"
+      >
+        Significantly larger amount of content Significantly larger amount of
+        content Significantly larger amount of content Significantly larger
+        amount of content Significantly larger amount of content Significantly
+        larger amount of content
+      </div>
+    </div>
+    <p class="text-2xl ...">none</p>
+    <p class="text-lg mb-4">
+      Use .none to allow a flex item to grow and shrink as needed, ignoring its
+      initial size:
+    </p>
+
+    <div class="flex bg-gray-200">
+      <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+        Item that can grow or shrink if needed
+      </div>
+      <div
+        class="flex-none text-gray-800 text-center bg-gray-500 px-4 py-2 m-2"
+      >
+        Item that cannot grow or shrink Item that cannot grow or shrink Item
+        that cannot grow or shrink Item that cannot grow or shrink Item that
+        cannot grow or shrink Item that cannot grow or shrink Item that cannot
+        grow or shrink
+      </div>
+      <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2">
+        Item that can grow or shrink if needed
+      </div>
+    </div>
+
+    <p class="text-3xl mt-6 ...">Flex Grow</p>
+    <p class="text-2xl ...">Grow</p>
+    <p class="text-lg mb-4">
+      Use .flex-grow to allow a flex item to grow to fill any available space:
+    </p>
+    <div class="flex bg-gray-200">
+      <div
+        class="flex-none text-gray-700 text-center bg-gray-400 px-4 py-2 m-2"
+      >
+        Content that cannot flex Content that cannot flex Content that cannot
+        flex Content that cannot flex Content that cannot flex Content that
+        cannot flex Content that cannot flex
+      </div>
+      <div
+        class="flex-grow text-gray-800 text-center bg-gray-500 px-4 py-2 m-2"
+      >
+        Item that will grow Item that will grow Item that will grow Item that
+        will grow Item that will grow Item that will grow Item that will grow
+        Item that will grow
+      </div>
+      <div
+        class="flex-none text-gray-700 text-center bg-gray-400 px-4 py-2 m-2"
+      >
+        Content that cannot flex Content that cannot flex Content that cannot
+        flex Content that cannot flex Content that cannot flex Content that
+        cannot flex Content that cannot flex Content that cannot flex
+      </div>
+    </div>
+
+    <p class="text-2xl ...">Don't Grow</p>
+    <p class="text-lg mb-4">
+      Use .flex-grow-0 to prevent a flex item from growing:
+    </p>
+
+    <div class="flex bg-gray-200">
+      <div
+        class="flex-grow text-gray-700 text-center bg-gray-400 px-4 py-2 m-2"
+      >
+        Will grow Will grow Will grow Will grow Will grow Will grow Will grow
+        Will grow Will grow Will grow Will grow Will grow Will grow Will grow
+      </div>
+      <div
+        class="flex-grow-0 text-gray-800 text-center bg-gray-500 px-4 py-2 m-2"
+      >
+        Will not grow Will not grow Will not grow Will not grow Will not grow
+        Will not grow Will not grow Will not grow Will not grow Will not grow
+        Will not grow Will not grow Will not grow Will not grow Will not grow
+        Will not grow Will not grow Will not grow Will not grow Will not grow
+        Will not grow Will not grow Will not grow Will not grow Will not grow
+        Will not grow Will not grow Will not grow Will not grow Will not grow
+      </div>
+      <div
+        class="flex-grow text-gray-700 text-center bg-gray-400 px-4 py-2 m-2"
+      >
+        Will grow Will grow Will grow Will grow Will grow Will grow Will grow
+        Will grow Will grow Will grow Will grow Will grow
+      </div>
+    </div>
+
+    <p class="text-3xl mt-6 ...">Flex shirnk</p>
+    <p class="text-2xl ...">start</p>
+    <p class="text-lg mb-4">
+      Use .flex-shrink to allow a flex item to shrink if needed:
+    </p>
+    <div class="flex bg-gray-200">
+      <div
+        class="flex-shirnk text-gray-700 text-center bg-gray-400 px-4 py-2 m-2"
+      >
+        Longer content that cannot flex Longer content that cannot flex Longer
+        content that cannot flex Longer content that cannot flex Longer content
+        that cannot flex Longer content that cannot flex Longer content that
+        cannot flex Longer content that cannot flex Longer content that cannot
+        flex Longer content that cannot flex Longer content that cannot flex
+      </div>
+      <div
+        class="flex-shrink text-gray-800 text-center bg-gray-500 px-4 py-2 m-2"
+      >
+        Item that will shrink even if it causes the content to wrap Item that
+        will shrink even if it causes the content to wrap Item that will shrink
+        even if it causes the content to wrap Item that will shrink even if it
+        causes the content to wrap Item that will shrink even if it causes the
+        content to wrap Item that will shrink even if it causes the content to
+        wrap Item that will shrink even if it causes the content to wrap Item
+        that will shrink even if it causes the content to wrap
+      </div>
+      <div
+        class="flex-none text-gray-700 text-center bg-gray-400 px-4 py-2 m-2"
+      >
+        Longer content that cannot flex Longer content that cannot flex Longer
+        content that cannot flex Longer content that cannot flex Longer content
+      </div>
+    </div>
+
+    <p class="text-3xl mt-6 ...">Don't shrink</p>
+    <p class="text-2xl ...">
+      Use .flex-shrink-0 to prevent a flex item from shrinking:
+    </p>
+
+    <div class="flex bg-gray-200">
+      <div
+        class="flex-shrink text-gray-700 text-center bg-gray-400 px-4 py-2 m-2"
+      >
+        Item that can shrink if needed Item that can shrink if needed Item that
+        can shrink if needed Item that can shrink if needed Item that can shrink
+        if needed Item that can shrink if needed can shrink if needed can shrink
+        if needed can shrink if needed can shrink if needed can shrink if needed
+        can shrink if needed can shrink if needed can shrink if needed can
+        shrink if needed Item that can shrink if needed Item that can shrink if
+        needed Item that can shrink if needed Item that can shrink if needed
+        Item that can shrink if needed Item that can shrink if needed can shrink
+        if needed can shrink if needed can shrink if needed can shrink if needed
+        can shrink if needed can shrink if needed can shrink if needed can
+        shrink if needed can shrink if needed
+      </div>
+      <div
+        class="flex-shrink-0 text-gray-800 text-center bg-gray-500 px-4 py-2 m-2"
+      >
+        Item that cannot shrink below its initial size Item that cannot shrink
+        <!-- below its initial size Item that cannot shrink below its initial size
+        Item that cannot shrink below its initial size Item that cannot shrink
+        below its initial size Item that cannot shrink below its initial size -->
+        <!-- Item that cannot shrink below its initial size Item that cannot shrink
+        below its initial size Item that cannot shrink below its initial size
+        Item that cannot shrink below its initial size Item that cannot shrink
+        below its initial size Item that cannot shrink below its initial size
+        Item that cannot shrink below its initial size Item that cannot shrink
+        below its initial size Item that cannot shrink below its initial size
+        Item that cannot shrink below its initial size Item that cannot shrink
+        below its initial size Item that cannot shrink below its initial size
+        Item that cannot shrink below its initial size Item that cannot shrink
+        below its initial size Item that cannot shrink below its initial size
+        Item that cannot shrink below its initial size Item that cannot shrink
+        below its initial size Item that cannot shrink below its initial size -->
+      </div>
+      <div
+        class="flex-shrink text-gray-700 text-center bg-gray-400 px-4 py-2 m-2"
+      >
+        Item that can shrink if needed Item that can shrink if needed Item that
+        can shrink if needed Item that can shrink if needed Item that can shrink
+        if needed Item that can shrink if needed Item that can shrink if needed
+        Item that can shrink if needed Item that can shrink if needed Item that
+        can shrink if needed Item that can shrink if needed Item that can shrink
+        if needed Item that can shrink if needed Item that can shrink if needed
+        Item that can shrink if needed Item that can shrink if needed Item that
+        can shrink if needed Item that can shrink if needed
+      </div>
+    </div>
+
+    <p class="text-3xl mt-6 ...">Grid</p>
+    <p class="text-2xl ...">Grid template columns</p>
+    <p class="text-lg mb-4">
+      Use the grid-cols-{n} utilities to create grids with n equally sized
+      columns.
+    </p>
+
+    <div class="grid grid-cols-3  gap-4 ">
+      <div
+        v-for="(item, index) in 24"
+        class="bg-gray-400 odd:bg-gray-700 p-4 text-center"
+        :key="index"
+      >
+        {{ index + 1 }}
+      </div>
+    </div>
+
+    <div class="grid grid-cols-12  gap-4 mt-10">
+      <div
+        v-for="(item, index) in 21"
+        class="bg-gray-400 odd:bg-gray-700 p-4 text-center"
+        :key="index"
+      >
+        {{ index + 1 }}
+      </div>
+    </div>
+    <p class="text-2xl ... mt-10">Responsive</p>
+    <div
+      class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"
+    >
+      <div
+        v-for="(item, index) in 21"
+        class="bg-gray-400 odd:bg-gray-700 p-4 text-center"
+        :key="index"
+      >
+        {{ index + 1 }}
+      </div>
+    </div>
   </div>
 </template>
 
@@ -621,7 +926,9 @@ export default {
   },
   components: {},
   data: function() {
-    return {};
+    return {
+      grid: [1, 2, 3, 4],
+    };
   },
   computed: {
     //...mapState([""])

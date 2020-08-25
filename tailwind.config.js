@@ -1,13 +1,14 @@
-
 module.exports = {
   purge: [],
   theme: {
     extend: {
       container: {
-        center: true
+        center: true,
       },
-    }
+    },
   },
-  variants: {},
+  variants: {
+    backgroundColor: ["responsive", "odd", "hover", "focus"],
+  },
   plugins: [],
-}
+};
