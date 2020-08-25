@@ -21,7 +21,7 @@ import "@/styles/index.scss"; // global css
 
 import "./icons"; // left menu icon
 
-import "./utils/css-grid-polyfill/css-polyfills";
+// import "./utils/css-grid-polyfill/css-polyfills";
 
 import VueMeta from "vue-meta";
 
