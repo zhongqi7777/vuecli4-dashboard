@@ -1,7 +1,16 @@
 <template>
   <div class="icon-agesex">
-    <div class="row start">年龄性别</div>
-    <div class="row end">5156</div>
+    <div class="start">
+      <img src="../../../../../assets/images/dashboard/person/men.png" alt="" />
+      <img
+        src="../../../../../assets/images/dashboard/person/women.png"
+        alt=""
+      />
+    </div>
+    <div class="end">
+      <span>45%</span>
+      <span>45%</span>
+    </div>
   </div>
 </template>
 
@@ -51,24 +60,20 @@ export default {
   right: 0;
   height: 70px;
   width: 100px;
-  .start,
-  .end {
-    display: flex;
-    justify-content: center;
-  }
-
-  .start {
-    font-size: 12px;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 1);
+  text-align: center;
+  img {
+    height: 45px;
+    margin: 0 5px;
   }
 
   .end {
-    font-size: 24px;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 1);
-    line-height: 33px;
-    margin-top: 10px;
+    span {
+      font-size: 12px;
+      font-weight: 400;
+      color: #ffffff;
+      line-height: 17px;
+      margin: 0 5px;
+    }
   }
 }
 </style>

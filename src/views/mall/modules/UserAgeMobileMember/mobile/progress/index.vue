@@ -21,16 +21,16 @@ export default {
   mounted() {
     this.showChart();
 
-    // window.addEventListener("resize", (ev) => {
-    //   this.$dt.start({
-    //     type: "debounce",
-    //     immediate: true,
-    //     time: 100,
-    //     success: () => {
-    //       this.chart.resize();
-    //     },
-    //   });
-    // });
+    window.addEventListener("resize", (ev) => {
+      this.$dt.start({
+        type: "debounce",
+        immediate: true,
+        time: 100,
+        success: () => {
+          this.chartContentPie.resize();
+        },
+      });
+    });
   },
   methods: {
     showChart() {
@@ -131,9 +131,9 @@ export default {
 <style scoped>
 .v-chart-progress {
   height: 100%;
-  /* position: relative; */
-  display: flex;
+  position: relative;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 </style>

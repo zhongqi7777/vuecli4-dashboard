@@ -58,6 +58,7 @@ export default {
     font-weight: 400;
     color: #ffffff;
     line-height: 20px;
+    margin-bottom: 3px;
   }
 }
 </style>
