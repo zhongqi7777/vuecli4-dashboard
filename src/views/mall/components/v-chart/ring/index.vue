@@ -33,6 +33,47 @@ export default {
         // area: false
         radius: [60, 70],
         offsetY: 99,
+        labelLine: {
+          normal: {
+            length: 5,
+            length2: 50,
+            lineStyle: {
+              type: "solid",
+            },
+          },
+        },
+        label: {
+          normal: {
+            formatter: (params) => {
+              console.log(params);
+              return (
+                "{b| " +
+                params.name +
+                "}  " 
+              );
+            },
+            borderWidth: 0,
+            borderRadius: 4,
+            padding: [0, -86],
+            height: 70,
+            fontSize: 13,
+            align: "center",
+            color: "#3494BD",
+            rich: {
+              b: {
+                fontSize: 12,
+                lineHeight: 20,
+                color: "#41B3DC",
+                padding: [0, 0, 5, 0],
+              },
+              c: {
+                fontSize: 20,
+                lineHeight: 20,
+                color: "orange",
+              },
+            },
+          },
+        },
       },
       chartExtend: {},
     };
