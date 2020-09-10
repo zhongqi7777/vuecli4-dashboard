@@ -46,15 +46,11 @@ export default {
           normal: {
             formatter: (params) => {
               console.log(params);
-              return (
-                "{b| " +
-                params.name +
-                "}  " 
-              );
+              return "{b| " + params.name + "}  ";
             },
             borderWidth: 0,
             borderRadius: 4,
-            padding: [0, -86],
+            padding: [0, -56],
             height: 70,
             fontSize: 13,
             align: "center",
