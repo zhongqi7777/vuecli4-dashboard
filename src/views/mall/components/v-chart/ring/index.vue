@@ -50,8 +50,8 @@ export default {
             },
             borderWidth: 0,
             borderRadius: 4,
-            padding: [0, -56],
-            height: 70,
+            padding: [0, -50],
+            height: 50,
             fontSize: 13,
             align: "center",
             color: "#3494BD",
@@ -71,7 +71,15 @@ export default {
           },
         },
       },
-      chartExtend: {},
+      chartExtend: {
+        color: ["#026DFF", "#F59F00", "#FF5C31"],
+        // tooltip: {
+        //   formatter: function(params) {
+        //     var dotHtml = `<span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:${params.color}"></span>`;
+        //     return `${dotHtml}${params.data.name} <br/>&nbsp&nbsp&nbsp占比: &nbsp${params.percent}%`;
+        //   },
+        // },
+      },
     };
   },
   components: {
