@@ -163,8 +163,7 @@ export default {
             top: 10,
             // bottom:30,
             type: "funnel",
-            height: "200",
-
+            height: "150",
             gap: 20,
             minSize: 150,
             left: "20%",
