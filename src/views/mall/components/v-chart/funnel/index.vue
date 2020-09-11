@@ -214,15 +214,15 @@ export default {
 
           // left
           {
-            bottom: "-50",
-            name: "youcejiantouleft",
+           // top: "50%",
+            // bottom: "-50",
+            // name: "youcejiantouleft",
             type: "pictorialBar",
             symbolPosition: "center",
             symbolSize: ["65", "150"],
             symbol: rightArrow,
             symbolClip: false,
             xAxisIndex: "1",
-
             z: 1,
             data: [
               {
