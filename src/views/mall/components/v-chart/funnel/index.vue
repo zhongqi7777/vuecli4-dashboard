@@ -209,6 +209,26 @@ export default {
               },
             ],
           },
+
+          {
+            top: "50%",
+            name: "youcejiantou",
+            type: "pictorialBar",
+            symbolPosition: "left",
+            symbolSize: ["75", "110"],
+            symbol: rightArrow,
+            symbolClip: true,
+            xAxisIndex: "1",
+            z: 1,
+            data: [
+              {
+                value: -400,
+                itemValue: "100%",
+                show: true,
+                label: markLineSetting,
+              },
+            ],
+          },
         ],
       };
 
