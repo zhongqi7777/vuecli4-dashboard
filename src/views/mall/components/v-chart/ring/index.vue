@@ -33,8 +33,53 @@ export default {
         // area: false
         radius: [60, 70],
         offsetY: 99,
+        labelLine: {
+          normal: {
+            length: 5,
+            length2: 50,
+            lineStyle: {
+              type: "solid",
+            },
+          },
+        },
+        label: {
+          normal: {
+            formatter: (params) => {
+              console.log(params);
+              return "{b| " + params.name + "}  ";
+            },
+            borderWidth: 0,
+            borderRadius: 4,
+            padding: [0, -50],
+            height: 50,
+            fontSize: 13,
+            align: "center",
+            color: "#3494BD",
+            rich: {
+              b: {
+                fontSize: 12,
+                lineHeight: 20,
+                color: "#41B3DC",
+                padding: [0, 0, 5, 0],
+              },
+              c: {
+                fontSize: 20,
+                lineHeight: 20,
+                color: "orange",
+              },
+            },
+          },
+        },
       },
-      chartExtend: {},
+      chartExtend: {
+        color: ["#026DFF", "#F59F00", "#FF5C31"],
+        // tooltip: {
+        //   formatter: function(params) {
+        //     var dotHtml = `<span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:${params.color}"></span>`;
+        //     return `${dotHtml}${params.data.name} <br/>&nbsp&nbsp&nbsp占比: &nbsp${params.percent}%`;
+        //   },
+        // },
+      },
     };
   },
   components: {

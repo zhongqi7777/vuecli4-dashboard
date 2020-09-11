@@ -97,6 +97,9 @@ export default {
             show: false,
           },
         },
+         series: {
+           smooth:false,//平滑曲线
+         }
       },
     };
   },
