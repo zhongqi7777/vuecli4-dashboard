@@ -125,7 +125,7 @@ export default {
           // left: "4%",
           right: 20,
           height: "135",
-          bottom: "-10",
+          bottom: "5",
         },
         xAxis: [
           {
@@ -171,11 +171,11 @@ export default {
                 var ins = d.name;
                 return ins;
               },
-              // rich: {
-              //   aa: {
-              //     padding: [8, 0, 6, 0],
-              //   },
-              // },
+              rich: {
+                aa: {
+                  padding: [8, 0, 6, 0],
+                },
+              },
             },
             data: data1,
           },
@@ -185,20 +185,20 @@ export default {
             name: "youcejiantou",
             type: "pictorialBar",
             symbolPosition: "center",
-            symbolSize: ["65", "55"],
+            symbolSize: ["50", "55"],
             symbol: rightArrow,
             symbolClip: true,
             xAxisIndex: "1",
             z: 1,
             data: [
               {
-                value: 365,
+                value: 380,
                 itemValue: "100%",
                 show: true,
                 label: markLineSetting,
               },
               {
-                value: 355,
+                value: 370,
                 itemValue: "70%",
                 label: markLineSetting,
               },

@@ -98,10 +98,10 @@ export default {
 
   // $grid-content-h: 450px;
   // $row-3-grid-content: 250px;
-  // $row-4-grid-content: 250px;
+  $row-4-grid-content: 250px;
   $grid-content-h: 450px;
   $row-3-grid-content: 20vh;
-  $row-4-grid-content: 25vh;
+  // $row-4-grid-content: 25vh;
   $grid-map-h: calc(450px - 150px);
   width: 100%;
   overflow: hidden;
