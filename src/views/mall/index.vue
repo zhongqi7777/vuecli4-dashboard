@@ -104,13 +104,17 @@ export default {
   // $row-4-grid-content: 25vh;
   $grid-map-h: calc(450px - 150px);
   width: 100%;
-  overflow: hidden;
+  height: 100%;
+  overflow-y: scroll;
   background: #000b23;
 
   .row-2,
-  .row-3,
-  .row-4 {
+  .row-3 {
     margin: 20px 35px;
+  }
+
+  .row-4 {
+    margin: 20px 35px 0 35px;
   }
 
   .row-3 {

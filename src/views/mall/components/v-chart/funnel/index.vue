@@ -192,13 +192,13 @@ export default {
             z: 1,
             data: [
               {
-                value: 365,
+                value: 361,
                 itemValue: "100%",
                 show: true,
                 label: markLineSetting,
               },
               {
-                value: 355,
+                value: 351,
                 itemValue: "70%",
                 label: markLineSetting,
               },
