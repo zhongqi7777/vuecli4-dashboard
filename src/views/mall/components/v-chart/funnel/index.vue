@@ -116,8 +116,13 @@ export default {
         backgroundColor: "#000B23",
         color: colors,
         tooltip: {
-          trigger: "item",
-          formatter: "{b} : {c}%",
+          // show: this.progress != 0,
+          //formatter: "{data.name} <br/>{b}: {c} ({d}%)"
+          formatter: (params) => {
+            console.log(" formatter: (params) => {", params);
+            var dotHtml = `<span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:${params.color}"></span>`;
+            return `${dotHtml}${params.name} <br/> &nbsp&nbsp&nbsp人数: &nbsp${params.value}`;
+          },
         },
         //折线
         grid: {
