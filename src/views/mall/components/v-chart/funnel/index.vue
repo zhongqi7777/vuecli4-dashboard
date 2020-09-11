@@ -154,7 +154,7 @@ export default {
         ],
         series: [
           {
-            top: 35,
+            top: 25,
             // bottom:30,
             type: "funnel",
             height: "150",
