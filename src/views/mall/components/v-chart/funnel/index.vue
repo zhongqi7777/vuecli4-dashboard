@@ -88,20 +88,6 @@ export default {
       };
       var lineargroup = [
         {
-          value: 100,
-          name: "目标 test",
-          oriname: "意向",
-          number: 98756,
-          color: ["rgba(29,211,137,0.8)", "rgba(29,211,137,0)"],
-        },
-        {
-          value: 80,
-          name: "方案率",
-          oriname: "方案",
-          number: 88756,
-          color: ["rgba(102,142,255,0.7)", "rgba(102,142,255,0)"],
-        },
-        {
           value: 60,
           name: "商務率",
           oriname: "商務",
@@ -124,35 +110,13 @@ export default {
         },
       ];
       var data1 = [];
-      var data2 = [];
       for (var i = 0; i < lineargroup.length; i++) {
         var obj1 = {
           value: lineargroup[i].value,
           num: lineargroup[i].number,
           name: lineargroup[i].oriname,
         };
-        var obj2 = {
-          value: lineargroup[i].value,
-          name: lineargroup[i].name,
-          itemStyle: {
-            normal: {
-              color: new echarts.graphic.LinearGradient(1, 0, 0, 0, [
-                {
-                  offset: 0,
-                  color: lineargroup[i].color[0],
-                },
-                {
-                  offset: 1,
-                  color: lineargroup[i].color[1],
-                },
-              ]),
-              borderWidth: 0,
-              opacity: 1,
-            },
-          },
-        };
         data1.push(obj1);
-        data2.push(obj2);
       }
       var option = {
         // backgroundColor: "#ffffff",
@@ -191,7 +155,7 @@ export default {
             inverse: true,
             type: "category",
             min: "转化率1",
-            data: ["转化率1", "转化率2", "转化率3", "转化率4", "转化率5"],
+            data: ["转化率1", "转化率2", "转化率3"],
           },
         ],
         series: [
@@ -199,7 +163,7 @@ export default {
             top: 10,
             // bottom:30,
             type: "funnel",
-            height: "270",
+            height: "200",
 
             gap: 20,
             minSize: 150,
@@ -221,70 +185,7 @@ export default {
             },
             data: data1,
           },
-          //   {
-          //     top: 0,
-          //     type: "funnel",
-          //     height: "400",
-          //     gap: 20,
-          //     minSize: 150,
-          //     left: "8%",
-          //     width: "60%",
-          //     z: 2,
-          //     label: {
-          //       normal: {
-          //         color: "#333",
-          //         position: "insideLeft",
-          //         padding: [11, 25],
-          //         formatter: function(d) {
-          //           var ins = "{aa|" + d.name + "}\n{bb|" + d.percent + "%}";
-          //           return ins;
-          //         },
-          //         rich: {
-          //           aa: {
-          //             align: "center",
-          //             color: "#666",
-          //             fontSize: "12",
-          //             lineHeight: "30",
-          //           },
-          //           bb: {
-          //             align: "center",
-          //             color: "#333",
-          //             fontSize: "22",
-          //           },
-          //         },
-          //       },
-          //     },
-          //     data: data2,
-          //   },
-          //   {
-          //     top: "20%",
-          //     type: "pictorialBar",
-          //     name: "xiaojiantou",
-          //     symbolSize: ["32", "17"],
-          //     symbolOffset: [0, -10],
-          //     symbolPosition: "center",
-          //     symbol: url,
-          //     animation: true,
-          //     symbolClip: true,
-          //     z: 10,
-          //     data: [
-          //       {
-          //         value: 100,
-          //       },
-          //       {
-          //         value: 100,
-          //       },
-          //       {
-          //         value: 100,
-          //       },
-          //       {
-          //         value: 100,
-          //       },
-          //       {
-          //         value: 100,
-          //       },
-          //     ],
-          //   },
+
           {
             top: "20%",
             name: "youcejiantou",
@@ -310,16 +211,6 @@ export default {
               {
                 value: 350,
                 itemValue: "40%",
-                label: markLineSetting,
-              },
-              {
-                value: 340,
-                itemValue: "20%",
-                label: markLineSetting,
-              },
-              {
-                value: 330,
-                itemValue: "10%",
                 label: markLineSetting,
               },
             ],

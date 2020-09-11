@@ -221,70 +221,70 @@ export default {
             },
             data: data1,
           },
-          //   {
-          //     top: 0,
-          //     type: "funnel",
-          //     height: "400",
-          //     gap: 20,
-          //     minSize: 150,
-          //     left: "8%",
-          //     width: "60%",
-          //     z: 2,
-          //     label: {
-          //       normal: {
-          //         color: "#333",
-          //         position: "insideLeft",
-          //         padding: [11, 25],
-          //         formatter: function(d) {
-          //           var ins = "{aa|" + d.name + "}\n{bb|" + d.percent + "%}";
-          //           return ins;
-          //         },
-          //         rich: {
-          //           aa: {
-          //             align: "center",
-          //             color: "#666",
-          //             fontSize: "12",
-          //             lineHeight: "30",
-          //           },
-          //           bb: {
-          //             align: "center",
-          //             color: "#333",
-          //             fontSize: "22",
-          //           },
-          //         },
-          //       },
-          //     },
-          //     data: data2,
-          //   },
-          //   {
-          //     top: "20%",
-          //     type: "pictorialBar",
-          //     name: "xiaojiantou",
-          //     symbolSize: ["32", "17"],
-          //     symbolOffset: [0, -10],
-          //     symbolPosition: "center",
-          //     symbol: url,
-          //     animation: true,
-          //     symbolClip: true,
-          //     z: 10,
-          //     data: [
-          //       {
-          //         value: 100,
-          //       },
-          //       {
-          //         value: 100,
-          //       },
-          //       {
-          //         value: 100,
-          //       },
-          //       {
-          //         value: 100,
-          //       },
-          //       {
-          //         value: 100,
-          //       },
-          //     ],
-          //   },
+          {
+            top: 0,
+            type: "funnel",
+            height: "400",
+            gap: 20,
+            minSize: 150,
+            left: "8%",
+            width: "60%",
+            z: 2,
+            label: {
+              normal: {
+                color: "#333",
+                position: "insideLeft",
+                padding: [11, 25],
+                formatter: function(d) {
+                  var ins = "{aa|" + d.name + "}\n{bb|" + d.percent + "%}";
+                  return ins;
+                },
+                rich: {
+                  aa: {
+                    align: "center",
+                    color: "#666",
+                    fontSize: "12",
+                    lineHeight: "30",
+                  },
+                  bb: {
+                    align: "center",
+                    color: "#333",
+                    fontSize: "22",
+                  },
+                },
+              },
+            },
+            data: data2,
+          },
+          {
+            top: "20%",
+            type: "pictorialBar",
+            name: "xiaojiantou",
+            symbolSize: ["32", "17"],
+            symbolOffset: [0, -10],
+            symbolPosition: "center",
+            symbol: url,
+            animation: true,
+            symbolClip: true,
+            z: 10,
+            data: [
+              {
+                value: 100,
+              },
+              {
+                value: 100,
+              },
+              {
+                value: 100,
+              },
+              {
+                value: 100,
+              },
+              {
+                value: 100,
+              },
+            ],
+          },
           {
             top: "20%",
             name: "youcejiantou",
