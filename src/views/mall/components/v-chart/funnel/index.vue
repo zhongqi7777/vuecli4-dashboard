@@ -185,7 +185,31 @@ export default {
             data: data1,
           },
 
-          {
+          // {
+          //   top: "50%",
+          //   name: "youcejiantou",
+          //   type: "pictorialBar",
+          //   symbolPosition: "center",
+          //   symbolSize: ["65", "55"],
+          //   symbol: rightArrow,
+          //   symbolClip: true,
+          //   xAxisIndex: "1",
+          //   z: 1,
+          //   data: [
+          //     {
+          //       value: 361,
+          //       itemValue: "100%",
+          //       show: true,
+          //       label: markLineSetting,
+          //     },
+          //     {
+          //       value: 351,
+          //       itemValue: "70%",
+          //       label: markLineSetting,
+          //     },
+          //   ],
+          // },
+         {
             top: "50%",
             name: "youcejiantou",
             type: "pictorialBar",
@@ -197,34 +221,8 @@ export default {
             z: 1,
             data: [
               {
-                value: 361,
-                itemValue: "100%",
-                show: true,
-                label: markLineSetting,
-              },
-              {
                 value: 351,
                 itemValue: "70%",
-                label: markLineSetting,
-              },
-            ],
-          },
-
-          {
-            top: "50%",
-            name: "youcejiantou",
-            type: "pictorialBar",
-            symbolPosition: "left",
-            symbolSize: ["75", "110"],
-            symbol: rightArrow,
-            symbolClip: true,
-            xAxisIndex: "1",
-            z: 1,
-            data: [
-              {
-                value: -400,
-                itemValue: "100%",
-                show: true,
                 label: markLineSetting,
               },
             ],
