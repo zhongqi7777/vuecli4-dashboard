@@ -52,6 +52,7 @@ export default {
       var url =
         "image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAARCAMAAACLgl7OAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAaVBMVEUAAADBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcEAAAD45xibAAAAInRSTlMAmT6WJYwSfBMGZAFHmEgtkBeCCW0KAlI1k5QeiA10A1tc7ah1owAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAB7SURBVCjPtZDZDoAgDAQXvA+8bwX1/3/SGKIBEd+cx07TdgtIiAF0/mygDvnAoYDr2b3nnjP8wOaDUG6J4ncfR9cdScpMzbJECZEXT1/kesyy0n1VPv6AulF908Kg6+9DWN/hjWGUfhpgYV5Ov8ywwgUhguODddtXvXIAjuUEs/70/t4AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMTItMTZUMTU6MzM6MDkrMDg6MDCzL2BEAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTEyLTE2VDE1OjMzOjA5KzA4OjAwwnLY+AAAAABJRU5ErkJggg==";
       var markLineSetting = {
+        // 折线文本
         normal: {
           show: true,
           //   backgroundColor: "#e4f5da",
@@ -69,19 +70,19 @@ export default {
             }
           },
           rich: {
-            img1: {
-              backgroundColor: {
-                // image: uploadedDataURL,
-              },
-              width: 18,
-              height: 16,
-            },
+            // img1: {
+            //   backgroundColor: {
+            //     // image: uploadedDataURL,
+            //   },
+            //   width: 18,
+            //   height: 16,
+            // },
             words: {
-              color: "#FFFFFFFF",
-              position: "right",
-              fontSize: 14,
-              lineHeight: 20,
-              padding: [0, 0, 5, 0],
+              // color: "#FFFFFFFF",
+              // position: "right",
+              // fontSize: 14,
+              // lineHeight: 20,
+              // padding: [0, 0, 5, 0],
             },
           },
         },
@@ -125,17 +126,18 @@ export default {
           trigger: "item",
           formatter: "{b} : {c}%",
         },
-        grid: {
-          top: "0",
-          left: "2%",
-          right: 10,
-          //   height: "300",
-          //   bottom: "10",
-          //  containLabel: true
-        },
+        //折线
+        // grid: {
+        //   top: "80",
+        //   left: "2%",
+        //   right: 10,
+        //   height: "10",
+        //   //   bottom: "10",
+        //   containLabel: true,
+        // },
         xAxis: [
           {
-            show: false,
+            show: true,
             inverse: true,
             position: "top",
           },
@@ -148,8 +150,8 @@ export default {
         ],
         yAxis: [
           {
-            position: "left",
-            top: "120",
+            // position: "right",
+            top: "105",
             show: false,
             boundaryGap: false,
             inverse: true,
@@ -160,7 +162,7 @@ export default {
         ],
         series: [
           {
-            top: 10,
+            top: 35,
             // bottom:30,
             type: "funnel",
             height: "150",
@@ -186,30 +188,25 @@ export default {
           },
 
           {
-            top: "20%",
+            // top: "50%",
             name: "youcejiantou",
             type: "pictorialBar",
             symbolPosition: "center",
-            symbolSize: ["73", "77"],
+            symbolSize: ["50", "55"],
             symbol: rightArrow,
             symbolClip: true,
             xAxisIndex: "1",
             z: 1,
             data: [
               {
-                value: 0,
-                itemValue: "50%",
-                show: false,
+                value: 380,
+                itemValue: "100%",
+                show: true,
                 label: markLineSetting,
               },
               {
-                value: 360,
-                itemValue: "50%",
-                label: markLineSetting,
-              },
-              {
-                value: 350,
-                itemValue: "40%",
+                value: 370,
+                itemValue: "70%",
                 label: markLineSetting,
               },
             ],
