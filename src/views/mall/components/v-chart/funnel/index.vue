@@ -185,6 +185,8 @@ export default {
             data: data1,
           },
 
+          //right
+
           {
             top: "50%",
             name: "youcejiantou",
@@ -197,13 +199,13 @@ export default {
             z: 1,
             data: [
               {
-                value: 361,
+                value: 363,
                 itemValue: "100%",
                 show: true,
                 label: markLineSetting,
               },
               {
-                value: 351,
+                value: 347,
                 itemValue: "70%",
                 label: markLineSetting,
               },
