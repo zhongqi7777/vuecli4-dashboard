@@ -54,7 +54,7 @@ export default {
       var markLineSetting = {
         normal: {
           show: true,
-        //   backgroundColor: "#e4f5da",
+          //   backgroundColor: "#e4f5da",
           borderRadius: 4,
           color: "#FFFFFFFF",
           verticalAlign: "middle",
@@ -63,8 +63,8 @@ export default {
           //   padding: [3, 10, 5, 10],
           formatter: function(d) {
             if (d.value) {
-			//   var ins = "{img1|} " + "{words|" + d.data.itemValue + "}";
-			  var ins = " 转换率 " + d.data.itemValue;
+              //   var ins = "{img1|} " + "{words|" + d.data.itemValue + "}";
+              var ins = " 转换率 " + d.data.itemValue;
               return ins;
             }
           },
@@ -165,8 +165,8 @@ export default {
           top: "0",
           left: "2%",
           right: 10,
-        //   height: "300",
-        //   bottom: "10",
+          //   height: "300",
+          //   bottom: "10",
           //  containLabel: true
         },
         xAxis: [
@@ -196,11 +196,11 @@ export default {
         ],
         series: [
           {
-			top: 10,
-			// bottom:30,
+            top: 10,
+            // bottom:30,
             type: "funnel",
-			height: "270",
-			
+            height: "270",
+
             gap: 20,
             minSize: 150,
             left: "20%",
