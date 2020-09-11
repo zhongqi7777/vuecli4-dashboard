@@ -134,7 +134,7 @@ export default {
         },
         xAxis: [
           {
-            show: true,
+            show: false,
             inverse: true,
             position: "top",
           },
@@ -185,31 +185,7 @@ export default {
             data: data1,
           },
 
-          // {
-          //   top: "50%",
-          //   name: "youcejiantou",
-          //   type: "pictorialBar",
-          //   symbolPosition: "center",
-          //   symbolSize: ["65", "55"],
-          //   symbol: rightArrow,
-          //   symbolClip: true,
-          //   xAxisIndex: "1",
-          //   z: 1,
-          //   data: [
-          //     {
-          //       value: 361,
-          //       itemValue: "100%",
-          //       show: true,
-          //       label: markLineSetting,
-          //     },
-          //     {
-          //       value: 351,
-          //       itemValue: "70%",
-          //       label: markLineSetting,
-          //     },
-          //   ],
-          // },
-         {
+          {
             top: "50%",
             name: "youcejiantou",
             type: "pictorialBar",
@@ -221,7 +197,34 @@ export default {
             z: 1,
             data: [
               {
+                value: 361,
+                itemValue: "100%",
+                show: true,
+                label: markLineSetting,
+              },
+              {
                 value: 351,
+                itemValue: "70%",
+                label: markLineSetting,
+              },
+            ],
+          },
+
+          // left
+          {
+            bottom: "-50",
+            name: "youcejiantouleft",
+            type: "pictorialBar",
+            symbolPosition: "center",
+            symbolSize: ["65", "150"],
+            symbol: rightArrow,
+            symbolClip: false,
+            xAxisIndex: "1",
+
+            z: 1,
+            data: [
+              {
+                value: 200,
                 itemValue: "70%",
                 label: markLineSetting,
               },
