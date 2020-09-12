@@ -1,14 +1,17 @@
 <template>
   <div class="panel-content">
     <!-- <div style="width:100%;height:350px;" ref="chartContentPie"></div> -->
-    <div
-      style="display:inline-block;width:100%;height:100%;"
-      ref="chartContentPie"
-    ></div>
+     <!-- <img :src="leftArrow" style="position:absolute;top:10px;left:10px;width:100px;height:100px;"></img> -->
+   
+    <div style="height:100%;width:100%;position: relative" ref="chartContentPie">
+     
+      
+    </div>
   </div>
 </template>
 
 <script>
+// import leftArrow from "@/assets/images/dashboard/funnel/leftArrow.png";
 import echarts from "echarts";
 export default {
   props: ["barColor", "progress", "city"],
@@ -17,6 +20,11 @@ export default {
     return {
       chartData: "71.23",
       chart: "",
+      //data:image/png;base64,
+      leftArrow:
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEkAAABNCAYAAADq4knKAAABTElEQVR4nO3c0W2DMAAGYbvKjKzgMZKMYUZgOUZwRSrAtRo4pZGK6H1PUZRIyekH+Yk4DEMJJ9R1XXzlX5VSQozfv/pxxkC/NYWqXebXr5Y/q3pRLmnDvKhlSe3EtHZxScCypPaO/l+1V9TUxSVt8Ma9o76yjNTo+/7qYXJHSunefsJIgJEAIwGnPXG/89znkgBP3IBLAowEGAkwEmAkwEiAkQAjAUYCjAQYCTASYCTASICRACMBRgKMBBgJMBJgJMBIgJEAIwFGAowEXMZxPPyP/GsuCTASYCTASICRACMBRgKMBBgJMBJgJMBIgJEAIwFGAowEGAkwEmAkwEiAkQAjAUYCjAQYqZFzLjnna/2ukX52q0MZ6bklVJzmddAfeRQ3l7QvxvnxGz484UtzZd1TSi5pwyNQ8Mb91BLoYbrcfMbkKue8xpmEED4Bda9HHADqTPQAAAAASUVORK5CYII=",
+      rightArrow:
+        "image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEkAAABNBAMAAAAYzFT5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAElBMVEUAAACZmZmZmZmqqqqZmZkAAAClqsN/AAAAA3RSTlMAf4C/aSLHAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAFdJREFUSMftzbENgCAYROEDHMCCASwYwMQFKNh/JkOhHfnPxuq9+sud9FSuZac+qnUFhUKhUKi3raNQqJ/U7qgU7k1VHZWGo+qI62qWyvHjrFkqW0pHTG6J1zAklFuGvAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMC0wMi0wM1QxODo0OTo1NyswODowMJLTpqcAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjAtMDItMDNUMTg6NDk6NTcrMDg6MDDjjh4bAAAAAElFTkSuQmCC",
     };
   },
   mounted() {
@@ -38,12 +46,43 @@ export default {
   methods: {
     showChart() {
       this.chart = echarts.init(this.$refs.chartContentPie);
-      var rightArrow =
-        "image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEkAAABNBAMAAAAYzFT5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAElBMVEUAAACZmZmZmZmqqqqZmZkAAAClqsN/AAAAA3RSTlMAf4C/aSLHAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAFdJREFUSMftzbENgCAYROEDHMCCASwYwMQFKNh/JkOhHfnPxuq9+sud9FSuZac+qnUFhUKhUKi3raNQqJ/U7qgU7k1VHZWGo+qI62qWyvHjrFkqW0pHTG6J1zAklFuGvAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMC0wMi0wM1QxODo0OTo1NyswODowMJLTpqcAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjAtMDItMDNUMTg6NDk6NTcrMDg6MDDjjh4bAAAAAElFTkSuQmCC";
-      var uploadedDataURL = "/asset/get/s/data-1576742942370-X6JMK0GY.png";
       var colors = ["#5F5EFF", "#026DFF", "#06C9DD"];
-      var url =
-        "image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAARCAMAAACLgl7OAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAaVBMVEUAAADBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcEAAAD45xibAAAAInRSTlMAmT6WJYwSfBMGZAFHmEgtkBeCCW0KAlI1k5QeiA10A1tc7ah1owAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAB7SURBVCjPtZDZDoAgDAQXvA+8bwX1/3/SGKIBEd+cx07TdgtIiAF0/mygDvnAoYDr2b3nnjP8wOaDUG6J4ncfR9cdScpMzbJECZEXT1/kesyy0n1VPv6AulF908Kg6+9DWN/hjWGUfhpgYV5Ov8ywwgUhguODddtXvXIAjuUEs/70/t4AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMTItMTZUMTU6MzM6MDkrMDg6MDCzL2BEAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTEyLTE2VDE1OjMzOjA5KzA4OjAwwnLY+AAAAABJRU5ErkJggg==";
+      var markLineSettingleft = {
+        // 折线文本
+        normal: {
+          show: true,
+          //   backgroundColor: "#e4f5da",
+          borderRadius: 4,
+          color: "#FFFFFFFF",
+          verticalAlign: "middle",
+          offset: [-15, 32, 0, 0],
+          fontSize: 14,
+          //   padding: [3, 10, 5, 10],
+          formatter: function(d) {
+            if (d.value) {
+              //   var ins = "{img1|} " + "{words|" + d.data.itemValue + "}";
+              var ins = " 转换率 " + d.data.itemValue;
+              return ins;
+            }
+          },
+          rich: {
+            // img1: {
+            //   backgroundColor: {
+            //     // image: uploadedDataURL,
+            //   },
+            //   width: 18,
+            //   height: 16,
+            // },
+            words: {
+              // color: "#FFFFFFFF",
+              // position: "right",
+              // fontSize: 14,
+              // lineHeight: 20,
+              // padding: [0, 0, 5, 0],
+            },
+          },
+        },
+      };
       var markLineSetting = {
         // 折线文本
         normal: {
@@ -120,8 +159,12 @@ export default {
           //formatter: "{data.name} <br/>{b}: {c} ({d}%)"
           formatter: (params) => {
             console.log(" formatter: (params) => {", params);
-            var dotHtml = `<span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:${params.color}"></span>`;
-            return `${dotHtml}${params.name} <br/> &nbsp&nbsp&nbsp人数: &nbsp${params.value}`;
+            var dotHtml = `<span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:${
+              params.color
+            }"></span>`;
+            return `${dotHtml}${params.name} <br/> &nbsp&nbsp&nbsp人数: &nbsp${
+              params.value
+            }`;
           },
         },
         //折线
@@ -193,7 +236,7 @@ export default {
             type: "pictorialBar",
             symbolPosition: "center",
             symbolSize: ["65", "55"],
-            symbol: rightArrow,
+            symbol: this.rightArrow,
             symbolClip: true,
             xAxisIndex: "1",
             z: 1,
@@ -214,21 +257,23 @@ export default {
 
           // left
           {
-           // top: "50%",
-            // bottom: "-50",
-            // name: "youcejiantouleft",
+            symbolOffset: [25, 37, 0, 0],
             type: "pictorialBar",
             symbolPosition: "center",
-            symbolSize: ["65", "150"],
-            symbol: rightArrow,
+            symbolSize: ["65", "126"],
+            // symbol: leftArrow,
+            symbol: "image://" + this.leftArrow,
             symbolClip: false,
             xAxisIndex: "1",
+            barCategoryGap: "10%",
+
             z: 1,
+            y: 100,
             data: [
               {
-                value: 200,
+                value: 220,
                 itemValue: "70%",
-                label: markLineSetting,
+                label: markLineSettingleft,
               },
             ],
           },
@@ -243,9 +288,9 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .panel-content {
-  position: relative;
   height: 100%;
+  position: relative;
 }
 </style>
