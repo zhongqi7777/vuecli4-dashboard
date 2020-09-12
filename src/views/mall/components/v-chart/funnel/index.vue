@@ -53,7 +53,7 @@ export default {
           show: true,
           //   backgroundColor: "#e4f5da",
           borderRadius: 4,
-          color: "#FFFFFFFF",
+          color: "yellow",
           verticalAlign: "middle",
           offset: [-15, 32, 0, 0],
           fontSize: 14,
@@ -158,7 +158,6 @@ export default {
           // show: this.progress != 0,
           //formatter: "{data.name} <br/>{b}: {c} ({d}%)"
           formatter: (params) => {
-            console.log(" formatter: (params) => {", params);
             var dotHtml = `<span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:${
               params.color
             }"></span>`;
@@ -271,7 +270,7 @@ export default {
             y: 100,
             data: [
               {
-                value: 220,
+                value: 223,
                 itemValue: "70%",
                 label: markLineSettingleft,
               },
