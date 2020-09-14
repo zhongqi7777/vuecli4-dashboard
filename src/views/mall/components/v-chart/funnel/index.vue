@@ -1,12 +1,12 @@
 <template>
   <div class="panel-content">
     <!-- <div style="width:100%;height:350px;" ref="chartContentPie"></div> -->
-     <!-- <img :src="leftArrow" style="position:absolute;top:10px;left:10px;width:100px;height:100px;"></img> -->
-   
-    <div style="height:100%;width:100%;position: relative" ref="chartContentPie">
-     
-      
-    </div>
+    <!-- <img :src="leftArrow" style="position:absolute;top:10px;left:10px;width:100px;height:100px;"></img> -->
+
+    <div
+      style="height:100%;width:100%;position: relative"
+      ref="chartContentPie"
+    ></div>
   </div>
 </template>
 
@@ -24,7 +24,9 @@ export default {
       leftArrow:
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEkAAABNCAYAAADq4knKAAABTElEQVR4nO3c0W2DMAAGYbvKjKzgMZKMYUZgOUZwRSrAtRo4pZGK6H1PUZRIyekH+Yk4DEMJJ9R1XXzlX5VSQozfv/pxxkC/NYWqXebXr5Y/q3pRLmnDvKhlSe3EtHZxScCypPaO/l+1V9TUxSVt8Ma9o76yjNTo+/7qYXJHSunefsJIgJEAIwGnPXG/89znkgBP3IBLAowEGAkwEmAkwEiAkQAjAUYCjAQYCTASYCTASICRACMBRgKMBBgJMBJgJMBIgJEAIwFGAowEXMZxPPyP/GsuCTASYCTASICRACMBRgKMBBgJMBJgJMBIgJEAIwFGAowEGAkwEmAkwEiAkQAjAUYCjAQYqZFzLjnna/2ukX52q0MZ6bklVJzmddAfeRQ3l7QvxvnxGz484UtzZd1TSi5pwyNQ8Mb91BLoYbrcfMbkKue8xpmEED4Bda9HHADqTPQAAAAASUVORK5CYII=",
       rightArrow:
-        "image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEkAAABNBAMAAAAYzFT5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAElBMVEUAAACZmZmZmZmqqqqZmZkAAAClqsN/AAAAA3RSTlMAf4C/aSLHAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAFdJREFUSMftzbENgCAYROEDHMCCASwYwMQFKNh/JkOhHfnPxuq9+sud9FSuZac+qnUFhUKhUKi3raNQqJ/U7qgU7k1VHZWGo+qI62qWyvHjrFkqW0pHTG6J1zAklFuGvAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMC0wMi0wM1QxODo0OTo1NyswODowMJLTpqcAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjAtMDItMDNUMTg6NDk6NTcrMDg6MDDjjh4bAAAAAElFTkSuQmCC",
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEkAAABNBAMAAAAYzFT5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAElBMVEUAAACZmZmZmZmqqqqZmZkAAAClqsN/AAAAA3RSTlMAf4C/aSLHAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAFdJREFUSMftzbENgCAYROEDHMCCASwYwMQFKNh/JkOhHfnPxuq9+sud9FSuZac+qnUFhUKhUKi3raNQqJ/U7qgU7k1VHZWGo+qI62qWyvHjrFkqW0pHTG6J1zAklFuGvAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMC0wMi0wM1QxODo0OTo1NyswODowMJLTpqcAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjAtMDItMDNUMTg6NDk6NTcrMDg6MDDjjh4bAAAAAElFTkSuQmCC",
+      // rightArrow:
+      //   "image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEkAAABNBAMAAAAYzFT5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAElBMVEUAAACZmZmZmZmqqqqZmZkAAAClqsN/AAAAA3RSTlMAf4C/aSLHAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAFdJREFUSMftzbENgCAYROEDHMCCASwYwMQFKNh/JkOhHfnPxuq9+sud9FSuZac+qnUFhUKhUKi3raNQqJ/U7qgU7k1VHZWGo+qI62qWyvHjrFkqW0pHTG6J1zAklFuGvAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMC0wMi0wM1QxODo0OTo1NyswODowMJLTpqcAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjAtMDItMDNUMTg6NDk6NTcrMDg6MDDjjh4bAAAAAElFTkSuQmCC",
     };
   },
   mounted() {
@@ -53,7 +55,7 @@ export default {
           show: true,
           //   backgroundColor: "#e4f5da",
           borderRadius: 4,
-          color: "yellow",
+          color: "#FFFFFF",
           verticalAlign: "middle",
           offset: [-15, 32, 0, 0],
           fontSize: 14,
@@ -89,7 +91,7 @@ export default {
           show: true,
           //   backgroundColor: "#e4f5da",
           borderRadius: 4,
-          color: "#FFFFFFFF",
+          color: "#FFFFFF",
           verticalAlign: "middle",
           offset: [40, 0, 0, 0],
           fontSize: 14,
@@ -158,12 +160,8 @@ export default {
           // show: this.progress != 0,
           //formatter: "{data.name} <br/>{b}: {c} ({d}%)"
           formatter: (params) => {
-            var dotHtml = `<span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:${
-              params.color
-            }"></span>`;
-            return `${dotHtml}${params.name} <br/> &nbsp&nbsp&nbsp人数: &nbsp${
-              params.value
-            }`;
+            var dotHtml = `<span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:${params.color}"></span>`;
+            return `${dotHtml}${params.name} <br/> &nbsp&nbsp&nbsp人数: &nbsp${params.value}`;
           },
         },
         //折线
@@ -235,7 +233,7 @@ export default {
             type: "pictorialBar",
             symbolPosition: "center",
             symbolSize: ["65", "55"],
-            symbol: this.rightArrow,
+            symbol: "image://" + this.rightArrow,
             symbolClip: true,
             xAxisIndex: "1",
             z: 1,
