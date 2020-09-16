@@ -8,28 +8,30 @@ const editRouter = {
     title: "editor",
     icon: "editor",
     noCache: true,
-    affix: true
+    affix: true,
   },
   children: [
     {
       path: "jspluimbchart",
-      component: () => import("@/views/editor/modules/flow/jspluimbchart/index"),
+      component: () =>
+        import("@/views/editor/modules/flow/jspluimbchart/index"),
       name: "jspluimbchart",
-      meta: { title: "jspluimbchart", noCache: true }
+      meta: { title: "jspluimbchart", noCache: true },
     },
     {
       path: "jspluimbchart/:id",
-      component: () => import("@/views/editor/modules/flow/jspluimbchart/index"),
+      component: () =>
+        import("@/views/editor/modules/flow/jspluimbchart/index"),
       name: "jspluimbchart",
-      meta: { title: "jspluimbchart", noCache: true }
+      meta: { title: "jspluimbchart", noCache: true },
     },
     {
       path: "flowlist",
       component: () => import("@/views/editor/modules/flow/list/index"),
       name: "jspluimbchart",
-      meta: { title: "jspluimbchart", noCache: true }
-    }
-  ]
+      meta: { title: "jspluimbchart", noCache: true },
+    },
+  ],
 };
 
 export default editRouter;

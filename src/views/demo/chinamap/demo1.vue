@@ -5,12 +5,13 @@
       :settings="chartSettings"
       v-bind="pubSetting"
     ></ve-map>
+    sffsfd
   </div>
 </template>
 
 <script>
 import vcharts from "@/mixin/v-charts.js";
-import mapOrigin from "mock/map/_data/china"
+import mapOrigin from "mock/map/_data/china";
 import { mapGetters, mapActions, mapState } from "vuex";
 const Base64 = require("js-base64").Base64;
 

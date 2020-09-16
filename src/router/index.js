@@ -8,7 +8,7 @@ Vue.use(VueRouter);
 
 /* Router Modules */
 import editRouter from "./modules/editor";
-
+import demoRouter from "./modules/demo";
 /**
  * constantRoutes
  * a base page that does not have permission requirements
@@ -18,28 +18,31 @@ export const constantRoutes = [
   {
     path: "/login",
     name: "login",
-    component: () => import("@/views/Login/index")
+    component: () => import("@/views/Login/index"),
   },
   {
     path: "/scatter",
     name: "mscatterall",
-    component: () => import("@/views/scatter/index3")
+    component: () => import("@/views/scatter/index3"),
   },
   {
     path: "/mall",
     name: "mall",
-    component: () => import("@/views/mall/index")
+    component: () => import("@/views/mall/index"),
   },
-  {
-    path: "/china-map-demo1",
-    name: "china-map",
-    component: () => import("@/views/chinamap/demo1")
-  },
-  {
-    path: "/china-map-demo2",
-    name: "china-map",
-    component: () => import("@/views/chinamap/demo2")
-  },
+
+  ...demoRouter,
+  // {
+  //   path: "/china-map-demo1",
+  //   name: "china-map",
+  //   component: () => import("@/views/chinamap/demo1")
+  // },
+  // {
+  //   path: "/china-map-demo2",
+  //   name: "china-map",
+  //   component: () => import("@/views/chinamap/demo2")
+  // },
+
   {
     path: "",
     // component: Container,
@@ -49,7 +52,7 @@ export const constantRoutes = [
       {
         path: "dashboard",
         component: () => import("@/views/dashboard/index"),
-        name: "Dashboard"
+        name: "Dashboard",
         // meta: {
         //   title: "dashboard",
         //   icon: "dashboard",
@@ -60,7 +63,7 @@ export const constantRoutes = [
       {
         path: "user",
         component: () => import("@/views/user/index"),
-        name: "user"
+        name: "user",
         // meta: {
         //   title: "user",
         //   icon: "user",
@@ -76,8 +79,8 @@ export const constantRoutes = [
           title: "project",
           icon: "edit",
           noCache: true,
-          affix: true
-        }
+          affix: true,
+        },
       },
       {
         path: "model",
@@ -87,8 +90,8 @@ export const constantRoutes = [
           title: "model",
           icon: "model",
           noCache: true,
-          affix: true
-        }
+          affix: true,
+        },
       },
       {
         path: "config",
@@ -98,12 +101,12 @@ export const constantRoutes = [
           title: "config",
           icon: "config",
           noCache: true,
-          affix: true
-        }
+          affix: true,
+        },
       },
-      editRouter
-    ]
-  }
+      editRouter,
+    ],
+  },
 ];
 
 /**
@@ -116,7 +119,7 @@ const createRouter = () =>
   new VueRouter({
     //mode: 'history', // require service support
     scrollBehavior: () => ({ y: 0 }),
-    routes: constantRoutes
+    routes: constantRoutes,
   });
 
 const router = createRouter();
