@@ -54,30 +54,30 @@ export default {
       var markLineSetting = {
         normal: {
           show: true,
-          //   backgroundColor: "#e4f5da",
+          backgroundColor: "#e4f5da",
           borderRadius: 4,
-          color: "#FFFFFFFF",
+          color: "#333",
           verticalAlign: "middle",
           offset: [40, 0, 0, 0],
           fontSize: 14,
-          //   padding: [3, 10, 5, 10],
+          padding: [3, 10, 5, 10],
           formatter: function(d) {
+            console.log(d);
             if (d.value) {
-              //   var ins = "{img1|} " + "{words|" + d.data.itemValue + "}";
-              var ins = " 转换率 " + d.data.itemValue;
+              var ins = "{img1|} " + "{words|" + d.data.itemValue + "}";
               return ins;
             }
           },
           rich: {
             img1: {
               backgroundColor: {
-                // image: uploadedDataURL,
+                image: uploadedDataURL,
               },
               width: 18,
               height: 16,
             },
             words: {
-              color: "#FFFFFFFF",
+              color: "#333",
               position: "right",
               fontSize: 14,
               lineHeight: 20,
@@ -89,7 +89,7 @@ export default {
       var lineargroup = [
         {
           value: 100,
-          name: "目标 test",
+          name: "目标",
           oriname: "意向",
           number: 98756,
           color: ["rgba(29,211,137,0.8)", "rgba(29,211,137,0)"],
@@ -164,9 +164,9 @@ export default {
         grid: {
           top: "0",
           left: "2%",
-          right: 10,
-          //   height: "300",
-          //   bottom: "10",
+          right: 20,
+          height: "336",
+          bottom: "10",
           //  containLabel: true
         },
         xAxis: [
@@ -196,11 +196,9 @@ export default {
         ],
         series: [
           {
-            top: 10,
-            // bottom:30,
+            top: 0,
             type: "funnel",
-            height: "270",
-
+            height: "400",
             gap: 20,
             minSize: 150,
             left: "20%",

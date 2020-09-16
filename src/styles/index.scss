@@ -1,10 +1,10 @@
-@import './variables.scss';
-@import './mixin.scss';
-@import './transition.scss';
-@import './element-ui.scss';
-@import './sidebar.scss';
-@import './btn.scss';
-@import './resetelement.scss';
+@import "./variables.scss";
+@import "./mixin.scss";
+@import "./transition.scss";
+@import "./element-ui.scss";
+@import "./sidebar.scss";
+@import "./btn.scss";
+@import "./resetelement.scss";
 @import "./reset.css";
 
 body {
@@ -12,7 +12,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, Arial, sans-serif;
 }
 
 label {
@@ -22,6 +23,15 @@ label {
 html {
   height: 100%;
   box-sizing: border-box;
+  /*隐藏滚动条，当IE下溢出，仍然可以滚动*/
+  -ms-overflow-style: none;
+  /*火狐下隐藏滚动条*/
+  overflow: -moz-scrollbars-none;
+}
+
+/*Chrome下隐藏滚动条，溢出可以透明滚动*/
+::-webkit-scrollbar {
+  width: 0px;
 }
 
 #app {
@@ -118,12 +128,12 @@ code {
 }
 
 .warn-content {
-  background: rgba(66, 185, 131, .1);
+  background: rgba(66, 185, 131, 0.1);
   border-radius: 2px;
   padding: 16px;
   padding: 1rem;
   line-height: 1.6rem;
-  word-spacing: .05rem;
+  word-spacing: 0.05rem;
 
   a {
     color: #42b983;
@@ -146,7 +156,7 @@ code {
 }
 
 .text-center {
-  text-align: center
+  text-align: center;
 }
 
 .sub-navbar {
@@ -157,7 +167,13 @@ code {
   text-align: right;
   padding-right: 20px;
   transition: 600ms ease position;
-  background: linear-gradient(90deg, rgba(32, 182, 249, 1) 0%, rgba(32, 182, 249, 1) 0%, rgba(33, 120, 241, 1) 100%, rgba(33, 120, 241, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(32, 182, 249, 1) 0%,
+    rgba(32, 182, 249, 1) 0%,
+    rgba(33, 120, 241, 1) 100%,
+    rgba(33, 120, 241, 1) 100%
+  );
 
   .subtitle {
     font-size: 20px;

@@ -92,29 +92,30 @@ export default {
 
 <style lang="scss">
 .mall {
-  $grid-content-h: 500px;
-  // $row-3-grid-content: 350px;
-  //  $grid-content-h: 55vh;
-  $row-3-grid-content: 40vh;
-  $grid-map-h: calc(500px - 150px);
+  // $grid-content-h: 500px;
+  // $row-3-grid-content: 40vh;
+  // $row-4-grid-content: 350px;
+
+  // $grid-content-h: 450px;
+  // $row-3-grid-content: 250px;
+  $row-4-grid-content: 250px;
+  $grid-content-h: 450px;
+  $row-3-grid-content: 20vh;
+  // $row-4-grid-content: 25vh;
+  $grid-map-h: calc(450px - 150px);
   width: 100%;
-  overflow: hidden;
+  height: 100%;
+  overflow-y: scroll;
   background: #000b23;
 
   .row-2,
-  .row-3,
-  .row-4 {
+  .row-3 {
     margin: 20px 35px;
   }
 
-  // .row-3,
-  // .row-4 {
-  //   height: $row-3-grid-content;
-
-  //   .el-col {
-  //     height: 100%;
-  //   }
-  // }
+  .row-4 {
+    margin: 20px 35px 0 35px;
+  }
 
   .row-3 {
     height: $row-3-grid-content;
@@ -125,7 +126,7 @@ export default {
   }
 
   .row-4 {
-    height: 350px;
+    height: $row-4-grid-content;
 
     .el-col {
       height: 100%;

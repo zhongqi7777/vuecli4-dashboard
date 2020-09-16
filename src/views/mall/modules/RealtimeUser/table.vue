@@ -1,11 +1,11 @@
 <template>
   <div class="realtime-user">
-    <el-table :data="tableData">
+    <el-table :data="newtable" :row-style="{ height: '10px' }">
+      <!-- <el-table :data="newtable"> -->
       <el-table-column prop="id" label="ID" width="50"> </el-table-column>
       <el-table-column prop="date" label="日期" width="130"> </el-table-column>
       <el-table-column prop="name" label="姓名" width="130"> </el-table-column>
-      <el-table-column prop="address" label="地址" width="200">
-      </el-table-column>
+      <el-table-column prop="address" label="地址"> </el-table-column>
     </el-table>
   </div>
 </template>
@@ -31,13 +31,13 @@ export default {
         {
           date: "2016-05-02",
           name: "王小虎1",
-          address: "上海路 1518 弄",
+          address: "上海",
           id: 1,
         },
         {
           date: "2016-05-04",
           name: "王小虎2",
-          address: "上海市路 1517 弄",
+          address: "上海",
           id: 2,
         },
         {
@@ -49,19 +49,19 @@ export default {
         {
           date: "2016-05-03",
           name: "王小虎4",
-          address: "上海市普江路 1516 弄",
+          address: "上海",
           id: 4,
         },
         {
           date: "2016-05-02",
           name: "王小虎5",
-          address: "上海路 1518 弄",
+          address: "上海路",
           id: 5,
         },
         {
           date: "2016-05-04",
           name: "王小虎6",
-          address: "上海市路 1517 弄",
+          address: "上海市",
           id: 6,
         },
         {
@@ -73,10 +73,11 @@ export default {
         {
           date: "2016-05-03",
           name: "王小虎8",
-          address: "上海市普江路 1516 弄",
+          address: "上海市",
           id: 8,
         },
       ],
+      newtable: [],
     };
   },
   computed: {
@@ -101,12 +102,13 @@ export default {
         this.tableData.push(this.tableData[0]); // 将数组的第一个元素添加到数组的
         this.tableData.shift(); //删除数组的第一个元素
         //this.animate = false; // margin-top 为0 的时候取消过渡动画，实现无缝滚动
+
+        this.newtable = this.tableData.slice(0, 3);
       }, 1000);
     },
   },
 };
 </script>
-
 <style lang="scss">
 .realtime-user {
   height: 100%;
@@ -148,7 +150,6 @@ export default {
   .el-table::before {
     height: 0;
   }
-
   .anim {
     transition: all 0.5s;
     margin-top: -30px;
