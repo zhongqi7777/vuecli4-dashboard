@@ -56,11 +56,27 @@ export default {
             align: "center",
             color: "#3494BD",
             rich: {
+              hr: {
+                backgroundColor: "t",
+                borderRadius: 100,
+                width: 0,
+                height: 10,
+                padding: [3, 3, 0, -16],
+                shadowColor: "#1c1b3a",
+                shadowBlur: 1,
+                shadowOffsetX: "0",
+                shadowOffsetY: "2",
+              },
               b: {
                 fontSize: 12,
                 lineHeight: 20,
                 color: "#41B3DC",
                 padding: [0, 0, 5, 0],
+                borderRadius: 100,
+                backgroundColor: "t",
+                borderRadius: 100,
+                width: 0,
+                height: 10,
               },
               c: {
                 fontSize: 20,
