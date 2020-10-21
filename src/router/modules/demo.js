@@ -18,6 +18,11 @@ const demoRouter = [
     component: () => import("@/views/demo/fill/height"),
     // meta: { title: "china-map-demo1", noCache: true },
   },
+  {
+    path: "/responsive",
+    component: () => import("@/views/demo/responsive/index"),
+    // meta: { title: "china-map-demo1", noCache: true },
+  },
 ];
 
 export default demoRouter;
