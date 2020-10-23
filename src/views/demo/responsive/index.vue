@@ -1,6 +1,6 @@
 <template>
   <div class="resposive">
-    <p></p>
+    <p>Responsive</p>
   </div>
 </template>
 
@@ -49,5 +49,10 @@ export default {
 //分辨率1600*900
 @media screen and (max-width: 1600px) {
   @import "./media/1600&900.scss";
+}
+
+//分辨率1280*900
+@media screen and (max-width: 1280px) {
+  @import "./media/1280&900.scss";
 }
 </style>
