@@ -5,13 +5,14 @@
   box-sizing: border-box;
 }
 
-*::before, *::after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
-  font-size: 14px;
-  color: #000;
+  /* font-size: 14px;
+  color: #000; */
 }
 
 * {
@@ -19,13 +20,13 @@ body {
   /*面子*/
   scrollbar-arrow-color: #00adfe;
   /*箭头*/
-  scrollbar-3dlight-color: #C0C0C0;
+  scrollbar-3dlight-color: #c0c0c0;
   /*最外左*/
-  scrollbar-highlight-color: #FFFFFF;
+  scrollbar-highlight-color: #ffffff;
   /*左二*/
-  scrollbar-shadow-color: #FFFFFF;
+  scrollbar-shadow-color: #ffffff;
   /*右二*/
-  scrollbar-darkshadow-color: #C0C0C0;
+  scrollbar-darkshadow-color: #c0c0c0;
   /*右一*/
   scrollbar-track-color: rgba(22, 39, 67, 0.3);
   /*滑道*/

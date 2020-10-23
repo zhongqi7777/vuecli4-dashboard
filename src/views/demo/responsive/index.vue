@@ -54,5 +54,13 @@ export default {
 //分辨率1280*900
 @media screen and (max-width: 1280px) {
   @import "./media/1280&900.scss";
+
+  html {
+    font-size: 3px !important;
+  }
+
+  // body {
+  //   font-size: 100px;
+  // }
 }
 </style>
