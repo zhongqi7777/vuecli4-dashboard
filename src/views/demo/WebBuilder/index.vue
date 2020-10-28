@@ -3,9 +3,9 @@
 </template>
 
 <script>
-import grapesjs from "./dist/grapes.min";
+// import grapesjs from "./dist/grapes.min";
 
-// import { grapesjs } from "./GrapesJS/src/index";
+import grapesjs from "./GrapesJS/src/index";
 import { mapGetters, mapActions, mapState } from "vuex";
 
 export default {
@@ -132,4 +132,6 @@ export default {
 
 <style lang="scss">
 @import "./dist/css/grapes.min.css";
+
+// @import "./GrapesJS/src/styles/scss/main.scss";
 </style>
