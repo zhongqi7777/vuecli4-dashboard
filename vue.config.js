@@ -46,11 +46,39 @@ module.exports = {
     configureWebpack: {
         // provide the app's title in webpack's name field, so that
         // it can be accessed in index.html to inject the correct title.
+       
         name: name,
         resolve: {
+            modules: ['src', 'node_modules'],
             alias: {
                 '@': resolve('src'),
-                'mock': resolve('mock')
+                'mock': resolve('mock'),
+                'asset_manager': resolve('src/views/demo/WebBuilder/GrapesJS/src'),
+                'style_manager': resolve('src/views/demo/WebBuilder/GrapesJS/src'),
+                'block_manager': resolve('src/views/demo/WebBuilder/GrapesJS/src'),
+                'canvas': resolve('src/views/demo/WebBuilder/GrapesJS/src'),
+                'code_manager': resolve('src/views/demo/WebBuilder/GrapesJS/src'),
+                'commands': resolve('src/views/demo/WebBuilder/GrapesJS/src'),
+                'css_composer': resolve('src/views/demo/WebBuilder/GrapesJS/src'),
+                'device_manager': resolve('src/views/demo/WebBuilder/GrapesJS/src'),
+                'dom_components': resolve('src/views/demo/WebBuilder/GrapesJS/src'),
+                'i18n': resolve('src/views/demo/WebBuilder/GrapesJS/src'),
+                'keymaps': resolve('src/views/demo/WebBuilder/GrapesJS/src'),
+                'modal_dialog': resolve('src/views/demo/WebBuilder/GrapesJS/src'),
+                'navigator': resolve('src/views/demo/WebBuilder/GrapesJS/src'),
+                'panels': resolve('src/views/demo/WebBuilder/GrapesJS/src'),
+                'parser': resolve('src/views/demo/WebBuilder/GrapesJS/src'),
+                'rich_text_editor': resolve('src/views/demo/WebBuilder/GrapesJS/src'),
+                'selector_manager': resolve('src/views/demo/WebBuilder/GrapesJS/src'),
+                'storage_manager': resolve('src/views/demo/WebBuilder/GrapesJS/src'),
+                'trait_manager': resolve('src/views/demo/WebBuilder/GrapesJS/src'),
+                'undo_manager': resolve('src/views/demo/WebBuilder/GrapesJS/src'),
+                'utils': resolve('src/views/demo/WebBuilder/GrapesJS/src'),
+                'utils/extender': resolve('src/views/demo/WebBuilder/GrapesJS/src/utils/extender'),
+                'utils/mixins': resolve('src/views/demo/WebBuilder/GrapesJS/src/utils/mixins'),
+                'utils/polyfills': resolve('src/views/demo/WebBuilder/GrapesJS/src/utils/polyfills'),
+                
+                jquery: 'cash-dom'
             }
         }
     },

@@ -47,7 +47,7 @@ export const constantRoutes = [
     path: "",
     // component: Container,
     component: () => import("@/container/index"),
-    redirect: "mall",
+    redirect: "web-builder",
     children: [
       {
         path: "dashboard",

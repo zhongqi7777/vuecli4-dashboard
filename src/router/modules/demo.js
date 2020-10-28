@@ -23,6 +23,11 @@ const demoRouter = [
     component: () => import("@/views/demo/responsive/index"),
     // meta: { title: "china-map-demo1", noCache: true },
   },
+  {
+    path: "/web-builder",
+    component: () => import("@/views/demo/WebBuilder/index"),
+    // meta: { title: "china-map-demo1", noCache: true },
+  },
 ];
 
 export default demoRouter;
