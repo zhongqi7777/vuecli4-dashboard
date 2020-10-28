@@ -131,7 +131,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./dist/css/grapes.min.css";
-
-// @import "./GrapesJS/src/styles/scss/main.scss";
+// @import "./dist/css/grapes.min.css";
+@import "./GrapesJS/src/styles/scss/main.scss";
 </style>
